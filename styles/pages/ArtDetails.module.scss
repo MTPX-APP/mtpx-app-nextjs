@@ -1,0 +1,85 @@
+.container {
+  width: 1144px;
+  margin: 25px auto 50px;
+  display: flex;
+  justify-content: space-between;
+
+  & .btnExpandIcon {
+    cursor: pointer;
+
+    &:hover {
+      color: var(--light-blue);
+    }
+  }
+
+  &.expandView {
+    display: block !important;
+
+    & .expandViewImageContainer {
+      width: 100% !important;
+
+      & .btnExpandIcon {
+        color: var(--light-blue);
+      }
+
+    }
+
+    & .expandViewContentContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      margin-top: 20px;
+      padding: 0 !important;
+
+      & .expandViewContentInfo {
+        width: 60%;
+        margin-right: 40px;
+      }
+      
+      & .expandViewContentPlaceBid {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;   
+  }
+ 
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: block;
+
+    & .btnExpandIcon {
+      display: none;
+    }
+
+
+    &.expandView {
+
+      & .expandViewContentContainer {
+        display: block;
+        
+        & .expandViewContentInfo {
+          width: 100%;
+        }
+        
+        & .expandViewContentPlaceBid {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

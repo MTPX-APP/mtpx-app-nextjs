@@ -1,0 +1,29 @@
+.avatar {
+  margin-right: 10px;
+  width: max-content;
+  height: max-content;
+  position: relative;
+
+  img {
+    border-radius: 50%;
+  }
+
+  .badge {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    bottom: 2px;
+    right: 0;
+    position: absolute;
+    background-color: var(--lighter-blue);
+    
+    svg {
+      color: var(--white) !important;        
+      width: 7px;
+      height: 7px;
+      position: relative;
+      top: -9px;
+      left: 4px;
+    }
+  }
+}

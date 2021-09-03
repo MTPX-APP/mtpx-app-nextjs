@@ -1,0 +1,20 @@
+.inputField {
+  border: var(--light-border);
+  width: 256px;
+  height: 48px;
+  outline: none;
+  border-radius: 12px;
+}
+
+.inputField::placeholder {
+  color: var(--light-grey);
+  font-size: 14px;
+  font-family: var(--font-poppins);
+  font-weight: var(--font-semi-bold);
+}
+
+@media screen and (max-width: 758px) {
+  .inputField {
+    width: 100%;
+  }
+}

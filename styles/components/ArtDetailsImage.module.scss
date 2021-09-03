@@ -1,0 +1,111 @@
+.container {
+  width: 80%;
+}
+
+.imageContainer {
+  position: relative;
+
+  .artImage {
+    border-radius: 20px;
+  }
+
+  .imageTab {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+  }
+}
+
+.imageText {
+  font-size: 12px;
+  color: var(--lighter-bg);
+  font-weight: var(--font-bold);
+  position: absolute;
+  top: 40px;
+  left: 30px;
+
+  p {
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+
+  & p.cat {
+    background-color: var(--darker-grey);
+    margin-right: 10px;
+  }
+
+  & p.lock {
+    background-color: var(--dark-violet);
+  }
+}
+
+.artIcons {
+  p {
+    font-weight: var(--font-semi-bold);
+    color: var(--darker-grey);
+    font-size: 14px;
+  }
+
+  i {
+    font-size: 20px;
+    font-weight: var(--font-semi-bold);
+    color: var(--light-grey);
+  }
+
+  & .viewIcon {
+    font-size: 20px;
+    margin: 0 8px 0;
+    color: var(--light-grey);
+  }
+
+  & .likeIcon {
+    font-size: 18px;
+    margin: 0 8px 0;
+    color: var(--pink);
+  }
+
+  & .expandIcon {
+    font-size: 20px;
+    margin: 0 8px 0;
+    color: var(--light-grey);
+  }
+
+  & .searchPlusIcon {
+    font-size: 20px;
+    margin: 0 8px 0;
+    cursor: pointer;
+    color: var(--light-grey);
+    &:hover {
+      color: var(--dark-grey);
+    }
+  }
+
+  &.artIconRight {
+    display: flex;
+  }
+}
+
+.fullscreenImage {
+  max-width: 70vh;
+}
+
+@media screen and (max-width: 1025px) {
+  .container {
+    width: 80%;
+    margin-bottom: 30px;
+    padding: 0 0;
+  }
+  .fullscreenImage {
+    max-width: 60vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    
+  }
+  .fullscreenImage {
+    max-width: 60vh;
+  }
+}

@@ -1,0 +1,48 @@
+.currentContainer {
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: flex;
+        border-bottom: solid 1px var(--lighter-grey);
+        padding: 10px 0;
+        align-items: center;
+        justify-content: flex-start;
+
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+        & .content {
+            .lightText {
+                color: var(--light-text);
+                font-size: 13px;
+            }
+            
+            .name {
+                color: var(--darker-grey) !important;
+                font-size: 14px;
+                font-weight: var(--font-bold);
+            }
+
+            .action {
+                color: var(--light-grey);
+                font-size: 14px;
+            }
+
+            .timeStamp {
+                color: var(--light-text);
+                font-size: 12px;
+                ;
+            }
+
+            .highlight {
+                color: var(--light-blue);
+            }
+        }
+
+        
+    }
+}

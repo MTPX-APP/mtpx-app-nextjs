@@ -1,0 +1,118 @@
+.wrapper {
+  padding: 64px 0;
+  background-color: #2955bf;
+}
+
+.container {
+  width: 1144px;
+  margin: 0 auto;
+
+  .couponWrapper {
+    display: flex;
+    align-content: left;
+    justify-content: flex-start;
+
+    p {
+      margin-right: 20px;
+    }
+  }
+}
+
+.btnCreateNow {
+  border: 2px solid rgba(255,255,255,.8);
+  padding: 10px 20px;
+  border-radius: 40px;
+  background-color: transparent;
+  font-size: 15px;
+}
+
+.bannerColumns {
+  color: #ffff;
+  font-family: var(--font-poppins);
+
+  
+
+  & h1 {
+    font-size: 46px;
+    color: #ffff;
+    line-height: 1.2em;
+    padding-bottom: 10px;
+    font-weight: var(--font-bold);
+  }
+
+  & p {
+    font-size: 14px;
+    padding-bottom: 10px;
+    color: var(--lighter-grey);
+  }
+
+}
+
+.lightText {
+  opacity: .7;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+
+  & p {
+    margin: 10px 0px;
+    margin-left: 15px;
+    padding: 5px 0;
+  }
+}
+
+
+@media screen and (max-width: 1150px) {
+  .buttonContainer {
+    display: block;
+    span {
+      display: block;
+    }
+  }
+
+  .wrapper {
+    padding: 64px 30px;
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .bannerColumns {
+      & h1 {
+        font-size: 30px;
+        line-height: 1.3em;
+      }
+    }
+
+    .wrapper {
+      padding: 64px 20px 30px;
+    }
+
+    .container {
+      width: 100%;
+      flex-direction: column;
+    }
+    
+    .bannerImage {
+      display: none;
+    }
+
+    .btnCreateNow {
+        padding: 15px 20px;        
+    }
+
+    .buttonContainer {
+      & button {
+        margin: 0 0 20px 0;
+      }
+    }
+}
+

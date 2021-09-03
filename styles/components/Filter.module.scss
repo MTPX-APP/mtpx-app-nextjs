@@ -1,0 +1,31 @@
+.filter {
+  background-color: var(--lighter-grey);
+  color: var(--dark-grey);
+  font-weight: var(--font-bold);
+  font-size: 14px;
+  border-radius: 90px;
+  padding: 10px 15px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+  }
+
+  &.active {
+    background-color: var(--light-blue);
+    color: var(--white);
+  }
+  
+  i {
+    font-weight: var(--font-bold);
+    font-size: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 758px) {
+  .filter {
+    text-align: center;
+  }
+}

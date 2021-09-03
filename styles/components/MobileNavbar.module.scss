@@ -1,0 +1,194 @@
+.container {
+  padding: 15px 30px;
+  position: relative;
+
+  .mobileLogoWrapper {
+    display: flex;
+    transition: transform .2s;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+
+  .barIcon {
+    cursor: pointer;
+    
+    width: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: var(--light-grey);            
+    }
+
+    &:hover {
+      svg {
+        color: var(--light-blue);
+      }
+    }
+
+    &.active {
+      svg {
+        color: var(--light-blue);
+      }
+    }
+  }
+
+  .bellIcon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    i {
+      color: var(--light-grey);
+      font-weight: var(--font-bolder);
+      font-size: 23px;
+      position: relative;
+      top:1px;
+
+      &:hover {
+        color: var(--light-blue);
+      }
+    } 
+    &.active {
+      i {
+        color: var(--light-blue);
+      }
+    }   
+  }
+
+  .popupAvatar {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 100px;
+    & > div {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+
+    &:hover {
+      border: solid 2px var(--light-blue)
+    }
+    &.active {
+      border: solid 2px var(--light-blue)
+    }
+  }
+
+  .navItem {
+    margin-right: -15px;
+    & > * {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.navContainer {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  padding: 30px;
+  box-shadow: 0px 64px 64px rgb(31 47 70 / 20%);
+  background: var(--lighter-bg);  
+  transition: all .2s;
+  left: 0;
+  right: 0;
+  top: 69px;
+
+}
+
+.navLinks {
+  margin: 30px 0 10px;
+  a {
+    display: block;
+    color: var(--light-grey);
+    font-size: 20px;
+    font-weight: var(--font-semi-bold);
+    padding: 20px 0;
+
+    &:first-child {
+      padding-top: 0px;
+    }
+
+    &:hover {
+      color: var(--light-blue);
+    }
+  }
+}
+
+.navField {
+  display: flex;
+  justify-content: space-between;
+
+  .createBtn {
+    text-align: center;
+    background-color: var(--light-blue);
+    padding: 10px 15px;
+    border-radius: 90px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: var(--font-DMSans);
+    font-weight: var(--font-semi-regular);
+    color: var(--white);
+    white-space: nowrap;
+    width: 45%;
+
+    a {
+      margin: 0;
+      padding: 0;
+      display: inline;
+    }
+  }
+
+  .connectBtn {
+    text-align: center;
+    background-color: var(--white);
+    border: solid 2px var(--lighter-grey);
+    padding: 10px 15px;
+    border-radius: 90px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: var(--font-DMSans);
+    font-weight: var(--font-semi-regular);
+    color: var(--light-grey);
+    white-space: nowrap;
+    width: 45%;
+
+    a {
+      margin: 0;
+      padding: 0;
+      display: inline;
+      font-weight: var(--font-bold);
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 1025px) {
+  .wrapper {
+    display: none;
+  }
+}

@@ -1,0 +1,286 @@
+
+
+.container {
+  width: 1144px;
+  margin: 0 auto;
+  padding: 40px 0;
+
+  .verifiedWrapper {
+    margin: 20px 0 30px;
+
+    padding: 30px 25px;
+    border: var(--light-border);
+    border-radius: 16px;
+
+    & .editTitle {
+      font-size: 1.2em;
+      color: var(--dark-grey);
+      font-weight: var(--font-bolder);
+      padding: 0 0 10px 0;
+    }
+  
+    & .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      width: 100%;
+      
+      & .content {
+        font-size: 14px;
+        color: var(--light-grey);
+      }
+  
+      & .btns {
+        width: 200px;
+        text-align: right;;
+      }
+    }
+  }
+}
+
+.title {
+  h2 {
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: var(--font-bold);
+    margin-bottom: 10px;
+  }
+  p {
+    color: var(--light-grey);
+    font-size: 14px;
+    span {
+      color: var(--darker-grey);
+    }
+  }
+}
+
+.editContainer {
+  margin: 50px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  
+}
+
+.editImage {
+  margin: 0 auto;
+  display: flex;
+  
+  .editInfo {
+    padding: 0 20px;
+    & p:nth-child(2) {
+      color: var(--light-grey);
+      font-family: var(--font-poppins);
+      font-weight: var(--font-regular);
+      font-size: 12px;
+      margin-bottom: 5px;
+      width: 90%;
+    }
+  }
+}
+
+
+
+.fieldContainer {
+  
+  h3 {
+    margin: 2rem 0;
+    font-size: 1.2em;
+    color: var(--dark-grey);
+
+    &.paddingTopNone {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.4em;
+    color: var(--light-grey);
+  }
+
+  .customlabel {
+    color: var(--light-grey);
+    font-size: 0.7em;
+    font-weight: var(--font-bold);
+    text-transform: uppercase; 
+    margin-top: 25px;
+    display: block;
+  }
+
+  .customtextarea {
+    margin: 20px 0 5px 0;
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid var(--lighter-grey);
+    background: none;
+    font-size: 14px;
+    line-height: 1.71429;
+    font-weight: var(--font-semi-regular);
+    color: var(--dark-grey);    
+    transition: border-color 0.2s;
+    padding: 10px 14px;
+  }
+
+  .inputlabel {
+    color: var(--light-grey);
+    font-size: 0.7em;
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    margin-top: 25px;
+    display: block;
+  }
+  
+  .dropdown {
+    margin: 20px 0 5px 0;
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid var(--lighter-grey);
+    background: none;
+    font-size: 14px;
+    line-height: 1.71429;
+    color: var(--dark-grey);
+    transition: border-color .2s;
+    font-weight: var(--font-semi-regular);
+    height: 48px;
+    padding-left: 5px;
+  }
+  
+  .inputtext {
+    margin: 20px 0 5px 0;
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid var(--lighter-grey);
+    background: none;
+    font-size: 14px;
+    line-height: 1.71429;
+    font-weight: var(--font-semi-regular);
+    color: var(--dark-grey);
+    transition: border-color .2s;
+    height: 48px;
+    padding: 0 14px;
+  }
+
+  .inputGroup {
+    margin: 20px 0 5px 0;
+
+    span {
+      border-radius: 12px;
+      font-size: 14px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      padding: 0 20px;
+    }
+  
+    input {
+      border-radius: 12px;
+      border: 2px solid var(--lighter-grey);
+      background: none;
+      font-size: 14px;
+      line-height: 1.71429;
+      font-weight: var(--font-semi-regular);
+      color: var(--dark-grey);    
+      transition: border-color 0.2s;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      
+    }
+  }
+
+  .btnApply {
+    background-color: var(--light-blue);
+    border-color: var(--light-blue) !important;
+    font-size: 15px;
+    padding: 10px 20px;
+    &:hover {
+      background-color: var(--dark-blue) !important;
+    }
+  }
+  
+  .buttondiv {
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+  
+    & .btnSubmit {
+      background-color: var(--light-blue);
+      border-color: var(--light-blue) !important;
+      font-size: 15px;
+      padding: 15px 30px;
+      &:hover {
+        background-color: var(--dark-blue);
+      }
+    }
+  
+    & .btnClear {
+      font-size: 15px;
+    }
+  }
+}
+
+.settingsInfo {
+  color: var(--light-grey);
+  font-size: 14px;
+  font-family: var(--font-poppins);
+  font-weight: var(--font-regular);
+  padding: 50px 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 1144px) {
+  
+  .container {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .editContainer {
+    flex-direction: column;
+  }
+  .editImage {
+    margin-bottom: 40px;
+    .editInfo {
+      & p:nth-child(2) {
+        width: 100%;
+      }
+    }
+  }
+
+  .fieldContainer {
+    width: 100%;
+    .field {
+      margin-top: 30px;
+
+      input {
+        width: 100%;
+      }
+
+      .customtextarea {
+        width: 100%;
+      }
+
+      .selectDropdown {
+        width: 100%;
+      }
+    }
+  }
+
+  .settingsInfo {
+    width: 100%;
+  }
+
+  .btnContainer {
+    flex-direction: column;
+    width: 100%;
+    button {
+      width: 100%;
+    }
+    .clearAll {
+      margin-left: 0;
+      margin-top: 20px;
+      text-align: center;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

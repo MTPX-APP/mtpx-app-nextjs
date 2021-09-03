@@ -1,0 +1,144 @@
+.button {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  padding: 0 24px;
+  background: var(--light-blue);
+  border-radius: 24px;
+  font-family: var(--font-DMSans);
+  font-size: 16px;
+  font-weight: var(--font-bold);
+  line-height: 1;
+  text-align: center;
+  color: var(--white);
+  transition: all 0.2s;
+  border: 0;
+}
+.button:hover {
+  background: var(--dark-blue);
+  cursor: pointer;
+}
+.button:not(:last-child) {
+  margin-bottom: 8px;
+}
+.button:last-child {
+/* .button:last-child {
+  background: none;
+  box-shadow: 0 0 0 2px var(--light-grey)  inset;
+  color: var(--darker-grey);
+  cursor: pointer;
+}
+} */
+.button:last-child :hover {
+  background: var(--dark-blue);
+}
+.button.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.button.done {
+  background: #b1b5c3;
+  
+}
+.button.loading {
+  background: var(--dark-blue);
+  font-size: 0;
+}
+.button.error {
+  box-shadow: 0 0 0 2px var(--light-grey) inset;
+  background: none;
+  background: var(--dark-blue);
+  color: var(--pink);
+}
+
+.dark-mode .button.error {
+  box-shadow: 0 0 0 2px var(--dark-grey) inset;
+}
+.button svg {
+  fill: var(--white) ;
+}
+.button:not([class^="button-circle"]) svg:first-child {
+  margin-right: 15px;
+}
+.button:not([class^="button-circle"]) svg:last-child {
+  margin-left: 15px;
+}
+
+.button-stroke {
+  background: none;
+  box-shadow: 0 0 0 2px var(--light-grey)  inset;
+  color: var(--darker-grey);
+}
+.button-stroke svg {
+  fill: var(--darker-grey);
+  transition: fill 0.2s;
+}
+.button-stroke:hover {
+  background: var(--light-blue);
+  box-shadow: 0 0 0 2px var(--light-blue) inset;
+  color: var(--lighter-bg);
+}
+.button-stroke:hover svg {
+  fill: var(--lighter-bg);
+}
+.dark-mode .button-stroke {
+  box-shadow: 0 0 0 2px var(--dark-grey) inset;
+  color: var(--lighter-bg);
+}
+.dark-mode .button-stroke svg {
+  fill: var(--lighter-bg);
+}
+.dark-mode .button-stroke:hover {
+  box-shadow: 0 0 0 2px var(--light-blue) inset;
+}
+
+.button-pink {
+  background: var(--pink);
+}
+.button-pink:hover {
+  background: var(--red);
+}
+
+.button-small {
+  height: 40px;
+  border-radius: 20px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.button-circle-stroke {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--light-grey)  inset;
+  background: transparent;
+  transition: all 0.2s;
+}
+.button-circle-stroke svg {
+  fill: var(--light-grey);
+  transition: fill 0.2s;
+}
+.button-circle-stroke:hover {
+  background: var(--light-blue);
+  box-shadow: 0 0 0 2px var(--light-blue) inset;
+}
+.button-circle-stroke:hover svg {
+  fill: var(--lighter-bg);
+}
+.dark-mode .button-circle-stroke {
+  box-shadow: 0 0 0 2px var(--dark-grey) inset;
+}
+.dark-mode .button-circle-stroke:hover {
+  background: var(--dark-grey);
+}
+
+.button-circle-stroke.button-small {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+}
+}

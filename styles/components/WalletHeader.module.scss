@@ -1,0 +1,21 @@
+.walletHeading {
+
+  h2 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+    color: var(--dark-grey);
+    font-weight: var(--font-bold);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .walletHeading {
+    padding-bottom: 10px;
+    h2 {
+      font-size: 24px;
+    }
+    i {
+      font-size: 18px;
+    }
+  }
+}

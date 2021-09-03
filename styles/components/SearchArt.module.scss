@@ -1,0 +1,153 @@
+.discoverCard {
+  display: grid;
+    list-style: none;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 36px;
+}
+
+.topContainer {
+  width: 100%;
+  background-color: var(--light-bg);
+  padding: 60px 0 0 0;
+
+  .title {
+    font-weight: var(--font-bold);
+    color: var(--darker-grey);
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .searchCount {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 0 60px 0;
+    color: var(--light-grey);
+    & .count {
+      color: val(--black) !important;
+      font-weight: var(--font-bold);
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 64px auto;
+  padding: 0 70px;
+
+  
+
+  .discoverField {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .discoverFilterWrapper {
+    display: none !important;
+  }
+
+  .discoverGrid {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin: 0  -16px 30px -16px;
+
+    & label {
+      color: var(--light-grey);
+      font-weight: var(--font-bold);
+    }
+
+    .chipInput {
+      width: 100%;
+      ul {
+        margin: 0 0 0 0;
+        width: 100%;
+        border-radius: 10px;
+        border: 2px solid var(--lighter-grey);
+        background: none;
+        font-size: 14px;
+        line-height: 1.71429;
+        font-weight: var(--font-semi-regular);
+        color: var(--dark-grey);
+        transition: border-color 0.2s;
+        min-height: 48px;
+        padding: 0 14px;
+      }
+    
+      ul:focus,
+      ul.p-focus {
+        border: 0 !important;
+        box-shadow: none I !important;
+      }
+    }
+
+    .discoverCol {
+      flex: 1px;
+      padding: 0 16px;
+  
+      & > div {
+        width: 100%;
+      }
+  
+      & > input {
+        width: 100%;
+      }
+  
+    }
+  }
+  
+  
+
+  
+}
+
+@media screen and (max-width: 758px) {
+  .container {
+    width: 100%;
+    // margin: 0;
+    padding: 0 20px;
+
+    .title {
+      margin-bottom: 20px;
+    }
+  }
+  .discoverField {
+    flex-direction: column;
+    margin-bottom: 0px;
+    & > * {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  .discoverGrid {
+    display: block !important;
+
+    & label {
+      padding-top: 10px;
+    }
+  }
+  
+}
+
+@media screen and (min-width: 758px) and (max-width: 1160px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .discoverField {
+    flex-direction: column;
+    margin-bottom: 0px;
+    & > * {
+      width: 100%;
+      margin-bottom: 30px;
+
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+}

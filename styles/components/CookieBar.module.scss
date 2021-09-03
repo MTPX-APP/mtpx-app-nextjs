@@ -1,0 +1,21 @@
+.container {
+    background: var(--lighter-bg) !important;
+    color: var(--light-grey) !important;
+    font-size: 12px !important;
+    border-top: solid 2px var(--light-grey);
+}
+
+.button {
+    color: var(--light-blue) !important;
+    background: transparent !important;
+    font-size: 14px !important;
+}
+
+@media screen and (max-width: 414px) {
+    .button {
+        border: solid 2px var(--lighter-grey) !important;
+        width: 100% !important;
+        border-radius: 6px !important;
+        margin-top: 0 !important;        
+    }
+}

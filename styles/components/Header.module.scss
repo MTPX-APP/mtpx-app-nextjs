@@ -1,0 +1,202 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--lighter-grey);
+  font-family: var(--font-poppins);
+  position: relative;
+
+  &.navBarHome {
+    background-color: var(--light-bg);
+    border-color: var(--light-bg);
+  }
+
+  & .logo {
+    padding-top: 6px;
+    cursor: pointer;
+    max-width: 138px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    width: -webkit-fill-available;
+    padding-left: 20px;
+  }
+
+  li {
+    font-size: 0.85em;
+    font-weight: var(--font-bold);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    color: var(--light-grey);
+    white-space: nowrap;
+  }
+
+  li:hover {
+    cursor: pointer;
+    color: var(--darker-grey);
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  & .noti {
+    & .btnNoti {
+      & i {
+        font-weight: var(--font-bolder);
+      }
+  
+      &:hover {
+        i {
+          color: var(--light-blue);
+        };
+      }
+      &.active {
+        i {
+          color: var(--light-blue);
+        };
+      }
+    }
+    
+  }
+
+  & .create {
+    & button {
+      height: 40px;
+      border-radius: 20px;
+      padding: 0 16px;
+      font-size: 14px;  
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--light-blue);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: var(--font-bold);
+      line-height: 1;
+      text-align: center;
+      color: var(--lighter-bg);
+      transition: all .2s;
+
+        & i {
+          font-weight: var(--font-bold);
+        }
+
+        &:hover {
+          background-color: var(--dark-blue);
+          border-color: var(--dark-blue);
+        }
+    }
+  }
+
+  & .connect {
+    & button {
+      background: none;
+      box-shadow: 0 0 0 2px var(--light-border) inset;
+      color: var(--darker-grey);
+      height: 40px;
+      border-radius: 20px;
+      border: solid 2px var(--lighter-grey) !important;
+      padding: 0 16px;
+      font-size: 14px;
+
+      &:hover,
+      &:active {
+        border-color: var(--light-grey) !important;
+        color: var(--light-grey) !important;
+
+        span {
+          color:var(--light-grey) !important;
+        }
+      }
+
+      & span {
+        font-weight: var(--font-bold);
+      }
+    }
+  }
+
+  & .connectedProfile {
+    border-color: var(--light-blue);
+    border-width: 2px !important;
+  }
+
+  & .search {
+    position: relative;
+
+    & input {
+      width: 100%;
+      height: 40px;
+      padding: 0 42px 0 16px;
+      background: none;
+      border: 2px solid var(--lighter-grey);
+      border-radius: 8px;
+      font-size: 12px;
+      line-height: 1.66667;
+      transition: border-color .2s;
+    }
+
+    & .searchButton {
+      position: absolute;
+      top: 1px;
+      right: 10px;
+      width: 40px;
+      height: 35px;
+      border: none;
+      background: white;
+      text-align: center;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    & i {
+      font-size: 1rem;
+      font-weight: var(--font-bold);
+      margin-right: 5px;
+    }
+  }
+}
+
+.avatar {
+  position: absolute;
+  left: 4%;
+  bottom: 2%;
+}
+
+.spanVal {
+  margin: 0 5px 0 25px;
+  color: var(--dark-grey);
+  font-weight: var(--font-bold);
+  font-size: 14px;
+}
+
+.greenCol {
+  color: var(--green);
+  font-weight: var(--font-bold);
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .navbar {
+    & .logo {
+      padding-top: 6px;
+      cursor: pointer;
+    }
+  }
+}

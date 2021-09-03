@@ -1,0 +1,127 @@
+.contentContainer {
+  padding: 0 0 0 40px;
+}
+
+.container {
+  width: 100%;
+  
+
+  .heading {
+    color: var(--darker-grey);
+    font-weight: var(--font-bold);
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .challengeWrapper {
+    display: flex;
+    padding: 30px 25px;
+    border: var(--light-border);
+    margin: 30px 0 40px;
+    border-radius: 16px;
+    box-shadow: 0px 64px 64px -24px rgb(31 47 70 / 12%);
+
+    & .challenge {
+      font-size: 14px;
+      width: 75%;
+      padding-right: 20px;
+      & .info {
+        padding-top: 10px;
+        color: var(--darker-grey);        
+        strong {
+          font-size: 15px;
+        }
+      }
+    }
+    & .place {
+      width: 25%;
+      text-align: center;
+      svg {
+        color: var(--light-text);
+        margin-right: 6px;
+        font-size: 18px;
+      }
+
+      span {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+.tabContainer {
+  border: var(--light-border);
+  padding: 5px 4px;
+  border-radius: 20px;
+  margin: 30px 0;
+}
+
+.priceTag > * {
+  margin-right: 10px;
+
+  &:last-child {
+    color: var(--light-grey);
+    font-weight: var(--font-bold);
+    font-family: var(--font-DMSans);
+    font-size: 16px;
+  }
+}
+
+.content {
+  padding: 20px 0 0;
+  p {
+    font-size: 15px;
+    line-height: 1.6em;
+    color: var(--dark-text);
+  }
+
+  .challenge p:first-child,
+  .place {
+    color: var(--light-grey);
+    span {
+      color: var(--lighter-blue);
+      font-weight: var(--font-semi-bold);
+    }
+  }
+
+  .contentHeader {
+    font-size: 12px;
+    text-transform: capitalize;
+    color: var(--light-text);
+    padding: 15px 0;
+  }
+
+  .tagLinks, .categoryLinks {
+    a {
+      color: var(--light-blue);
+      padding: 2px 5px 2px 0px;
+      font-size: 14px;
+    }
+  }
+}
+
+.userName {
+  font-family: var(--font-poppins);
+  font-size: 14px;
+  & p:first-child {
+    color: var(--light-grey);
+  }
+  & p:last-child {
+    color: var(--darker-grey);
+    font-weight: var(--font-semi-bold);
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contentContainer {
+    padding: 0 0 0 0;
+  }
+  
+}

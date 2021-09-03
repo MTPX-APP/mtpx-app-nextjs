@@ -1,0 +1,40 @@
+.headerContainer {
+  width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  h3 {
+    color: var(--light-grey);
+    font-size: 24px;
+    font-family: var(--font-poppins);
+    font-weight: var(--font-semi-bold);
+  }
+
+  h1 {
+    color: var(--darker-grey);
+    font-size: 40px;
+    font-weight: var(--font-bold);
+    margin-bottom: 48px;
+  }
+
+  .angleDownIcon {
+    margin-left: 15px;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 758px) {
+  .headerContainer {
+    width: 100%;
+    flex-direction: column;
+    padding: 0 30px;
+  }
+}
+
+@media screen and (min-width: 758px) and (max-width: 1024px) {
+  .headerContainer {
+    width: 100%;
+    padding: 0 30px;
+  }
+}

@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400;500;600&display=swap");
+
+:root {
+  --light-blue: #3772ff;
+  --lighter-blue: #2e79ff;
+  --dark-blue: #2955bf;
+  --pale-blue: #bdd4fe;
+  --lighter-grey: #e6e8ec;
+  --light-grey: #777e90;
+  --dark-grey: #353945;
+  --darker-grey: #23262f;
+  --light-violet: #92a8de;
+  --dark-violet: #9757d7;
+  --darker-violet: #5b2d89;
+  --black: #141416;
+  --green: #45b36b;
+  --graygreen: #2e5144;
+  --orange: #d06821;
+  --pink: #ef466f;
+  --red: #ef3333;
+  --white: #ffffff;
+  --light-border: 2px solid #e6e8ec;
+  --blue-border: 2px solid #3772ff;
+  --light-bg: #f4f5f6;
+  --lighter-bg: #fcfcfd;
+  --light-text: #b1b5c3;
+  --font-poppins: "Poppins", helvetica, arial, sans-serif;
+  --font-DMSans: "DM Sans", helvetica, arial, sans-serif;
+  --font-bolder: 600;
+  --font-bold: 500;
+  --font-semi-bold: 500;
+  --font-semi-regular: 300;
+  --font-regular: 400;
+  --social-twitter: #1da1f2;
+  --social-instagram: #405de6;
+  --social-facebook: #4267b2;
+  --social-dribbble: #ea4c89;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-poppins);
+  font-style: normal;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+strong {
+  font-weight: var(--font-bold);
+}
+
+.tooltip-icon {
+  padding-left: 5px;
+  color: var(--light-blue);
+  font-weight: var(--font-bolder);
+  cursor: pointer;
+}
+
+small {
+  font-size: 13px;
+  color: var(--light-text);
+}
+
+/*
+  <Override PrimeReact Components>
+*/
+
+/* <Dialogs> */
+.p-dialog {
+  border-radius: 10px;
+  box-shadow: none;
+
+  .p-dialog-header {
+    background: var(--white);
+    color: var(--dark-grey);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+    .p-dialog-title {
+      font-weight: var(--font-bold);
+    }
+    .p-dialog-header-icon {
+      color: var(--black);
+      border-radius: 50%;
+      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+
+      .pi {
+        font-weight: var(--font-bolder);
+      }
+    }
+    .p-dialog-header-icon:enabled:hover {
+      color: var(--darker-grey);
+      border-color: transparent;
+      background: #e9ecef;
+    }
+    .p-dialog-header-icon:focus {
+      outline: 0 none;
+      outline-offset: 0;
+      box-shadow: 0 0 0 0.2rem var(--light-grey);
+    }
+    .p-dialog-header-icon:last-child {
+      margin-right: 0;
+    }
+
+    .p-dialog-header-close {
+      border: solid 2px var(--lighter-grey);
+      transition: transform 0.2s;
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+
+    .p-dialog-header-maximize {
+      .pi {
+        font-weight: var(--font-bold);
+      }
+    }
+  }
+
+  .p-dialog-content {
+    background: var(--white);
+    color: var(--light-grey);
+  }
+
+  .p-dialog-footer {
+    background: var(--white);
+    color: var(--dark-grey);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 15px;
+  }
+
+  &.p-confirm-dialog {
+    .p-confirm-dialog-icon {
+      font-size: 2rem;
+    }
+
+    .p-confirm-dialog-message {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.p-dialog-mask.p-component-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* <Inputs> */
+.p-inputtext {
+  font-weight: var(--font-semi-bold) !important;
+  font-size: 14px !important;
+  color: var(--darker-grey) !important;
+  padding: 10px 15px !important;
+  &.p-dropdown-label {
+    padding: 10px !important;
+  }
+}
+
+/* <Buttons> */
+.p-button {
+  &.p-fileupload-choose {
+    border-radius: 50px;
+    border: solid 2px var(--light-grey);
+    background: transparent;
+    color: var(--light-grey);
+    font-size: 14px;
+
+    &:hover {
+      border-color: var(--light-blue) !important;
+      background-color: transparent !important;
+      color: var(--light-blue) !important;
+    }
+  }
+}
+
+/* <RadioButtons> */
+.p-radiobutton {
+  .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+    border-color: var(--dark-blue);
+  }
+
+  .p-radiobutton-box:not(.p-disabled).p-focus {
+    border-color: var(--dark-blue);
+  }
+
+  .p-radiobutton-box.p-highlight {
+    border-color: var(--light-blue);
+    background: var(--light-blue);
+  }
+
+  .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
+    border-color: var(--dark-blue);
+    background: var(--dark-blue);
+  }
+
+  &.p-invalid > .p-radiobutton-box {
+    border-color: var(--red);
+  }
+}
+
+/* <Panels> */
+
+.p-panel .p-panel-header {
+  border: none;
+  background: var(--light-bg);
+  color: var(--dark-grey);
+  border-radius: 6px;
+}
+.p-panel .p-panel-header .p-panel-title {
+  font-weight: var(--font-bold);
+}
+
+.p-panel .p-panel-content {
+  border: none;
+  color: var(--dark-grey);
+  border-radius: 0;
+  border-top: 0 none;
+  font-size: 15px;
+}
+
+/* <CollectionWrapper> */
+
+.collection-wrapper {
+  .p-selectbutton {
+    margin: 20px 0;
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 10px;
+
+    &.p-invalid > .p-button {
+      border-color: #f44336;
+    }
+
+    .p-button {
+      box-shadow: none;
+      padding: 10px;
+      margin: 0;
+      height: 130px;
+      color: var(--dark-grey);
+      box-shadow: none;
+      border-radius: 8px;
+      border: solid 2px var(--lighter-grey);
+      justify-content: left;
+
+      .collectioncard {
+        box-shadow: none;
+        background-color: transparent;
+        margin: 0 auto;
+
+        .collectionavatarnew {
+          background-color: var(--light-blue);
+          color: var(--white);
+        }
+
+        .collectionavatar {
+          background-color: var(--lighter-grey);
+          color: var(--light-grey);
+          opacity: 0.4;
+          width: 50px;
+          height: 50px;
+        }
+
+        .collectionphoto {
+          opacity: 0.4;
+          border-radius: 50px;
+        }
+
+        .collectionname {
+          margin: 5px 0 0 0;
+          font-weight: var(--font-semi-bold);
+          font-size: 13px;
+        }
+
+        &:hover {
+          border-color: var(--lighter-blue) !important;
+          background-color: transparent;
+        }
+      }
+
+      &.p-highlight {
+        border-color: var(--lighter-blue);
+        background: transparent;
+        .collectioncard {
+          .collectionavatar {
+            background-color: var(--lighter-blue);
+            color: var(--white);
+            opacity: 1;
+          }
+
+          .collectionphoto {
+            opacity: 1;
+          }
+          .collectionname {
+            color: var(--dark-blue);
+          }
+        }
+      }
+
+      &:hover {
+        border-color: var(--dark-blue) !important;
+        background-color: transparent !important;
+        .collectioncard {
+          .collectionavatar {
+            background-color: var(--lighter-blue);
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* <Divider> */
+.p-divider {
+  &.p-divider-horizontal {
+    padding: 3px 0;
+  }
+}
+
+/* <dropdown> */
+.p-dropdown {
+  border: 2px solid var(--lighter-grey);
+  background-color: var(--white) !important;
+}
+
+.p-dropdown-label {
+  align-items: center;
+  display: flex;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.p-dropdown-panel {
+  margin-top: 10px;
+  text-align: left;
+  border-radius: 12px;
+  background: var(--lighter-bg);
+  border: 2px solid var(--lighter-grey);
+  box-shadow: 0 4px 12px rgb(35 38 47 / 10%);
+  font-weight: var(--font-semi-bold) !important;
+  font-size: 14px !important;
+  color: var(--darker-grey) !important;
+}
+
+.p-dropdown-trigger-icon {
+  border: 2px solid var(--lighter-grey);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+
+  &.pi-angle-down::before {
+    position: relative;
+    top: 3px;
+    left: 3px;
+    font-size: 15px;
+  }
+}
+
+.p-carousel-indicator {
+  display: none;
+}
+
+.p-inputswitch.p-inputswitch-checked {
+  .p-inputswitch-slider {
+    background-color: var(--light-blue);
+    &:hover {
+      background-color: var(--dark-blue) !important;
+    }
+  }
+}
+
+.p-checkbox .p-checkbox-box.p-highlight {
+  border-color: var(--light-blue);
+  background: var(--light-blue);
+  font-weight: 900;
+
+  &:hover {
+    border-color: var(--dark-blue) !important;
+    background: var(--dark-blue) !important;
+  }
+}
+
+/* <CHECKBOXES> */
+.p-checkbox .p-checkbox-box .p-checkbox-icon {
+  &::before {
+    font-weight: var(--font-bolder);
+  }
+}
+
+/* <TAGS> */
+.p-tag {
+  background: var(--light-bg);
+  color: var(--dark-grey);
+  font-size: 14px;
+  font-weight: var(--font-bold);
+  padding: 0.25rem 0.4rem;
+  border-radius: 4px;
+  &:hover {
+    background: var(--lighter-grey);
+    color: var(--darker-grey) !important;
+  }
+}
+
+/* CHIPS */
+.p-chips {
+  .p-chips-multiple-container {
+    .p-chips-token {
+      background-color: var(--pale-blue);
+      border-radius: 5px;
+      color: var(--darker-grey);
+      .p-chips-token-icon {
+        font-weight: var(--font-bolder);
+        opacity: 0.7;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+/* <TOOLTIP> */
+
+.p-tooltip .p-tooltip-text {
+  background: var(--lighter-blue);
+  color: var(--lighter-bg);
+  font-size: 13px;
+  box-shadow: 0px 64px 64px -48px rgb(31 47 70 / 12%);
+  border-radius: 6px;
+}
+
+.p-tooltip.p-tooltip-right .p-tooltip-arrow {
+  border-right-color: var(--lighter-blue);
+}
+
+.p-tooltip.p-tooltip-left .p-tooltip-arrow {
+  border-left-color: var(--lighter-blue);
+}
+
+.p-tooltip.p-tooltip-top .p-tooltip-arrow {
+  border-top-color: var(--lighter-blue);
+}
+
+.p-tooltip.p-tooltip-bottom .p-tooltip-arrow {
+  border-bottom-color: var(--lighter-blue);
+}
+
+/* <TOAST> */
+.p-toast {
+  opacity: 1;
+
+  & .p-toast-message {
+    box-shadow: 0px 40px 32px -24px rgb(15 15 15 / 12%);
+    border-radius: 8px;
+
+    & .p-toast-message-content {
+      & .p-toast-message-text {
+        margin: 0 0 0 1rem;
+        font-size: 13px;
+        font-weight: var(--font-semi-bold);
+      }
+
+      & .p-toast-summary {
+        font-size: 15px;
+        font-weight: var(--font-semi-bold);
+      }
+    }
+
+    &.p-toast-message-info {
+      background: var(--light-bg);
+      border-width: 0 0 0 0;
+      border: solid 2px var(--lighter-grey);
+      color: var(--dark-grey);
+
+      .p-toast-icon-close,
+      .p-toast-message-icon {
+        color: var(--light-blue);
+      }
+    }
+
+    &.p-toast-message-success {
+      background: var(--lighter-blue);
+      border-width: 0 0 0 0;
+      color: var(--lighter-bg);
+
+      .p-toast-icon-close,
+      .p-toast-message-icon {
+        color: (var(--dark-blue));
+      }
+    }
+
+    &.p-toast-message-warn {
+      background: var(--dark-violet);
+      border-width: 0 0 0 0;
+      color: var(--lighter-bg);
+
+      .p-toast-icon-close,
+      .p-toast-message-icon {
+        color: var(--darker-violet);
+      }
+    }
+
+    &.p-toast-message-error {
+      background: var(--red);
+      border-width: 0 0 0 0px;
+      color: var(--lighter-bg);
+
+      .p-toast-message-icon,
+      .p-toast-icon-close {
+        color: #73000c;
+      }
+    }
+  }
+}
+
+/*
+  </Override PrimeReact Components>
+*/

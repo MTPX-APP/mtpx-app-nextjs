@@ -1,0 +1,82 @@
+.container {
+  padding: 30px 25px;
+  border: var(--light-border);
+  margin-top: 30px;
+  border-radius: 16px;
+  box-shadow: 0px 64px 64px -24px rgb(31 47 70 / 12%);
+    
+}
+
+.bidDetails {
+  font-family: var(--font-poppins);
+  p {
+    color: var(--light-grey);
+
+    &:first-child {
+      font-size: 14px;
+      font-weight: var(--font-semi-bold);
+
+      span {
+        margin-left: 5px;
+      }
+    }
+
+    &:last-child {
+      font-size: 24px;
+      font-weight: var(--font-bold);
+
+      span {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  span {
+    color: var(--darker-grey);
+  }
+}
+
+.btnContainer {
+  margin: 20px 0;
+  & > div {
+    width: 100%;
+
+    &:first-child {
+      margin-right: 10px;
+    }
+
+    button {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+}
+
+.serviceDetails {
+  font-size: 14px;
+  color: var(--light-grey);
+
+  & > * {
+    margin-right: 10px;
+  }
+
+  p:nth-child(1) {
+    font-weight: var(--font-semi-bold);
+  }
+
+  p:nth-child(2) {
+    font-weight: var(--font-semi-bold);
+    color: var(--darker-grey);
+  }
+
+  p:nth-child(3),
+  p:nth-child(4) {
+    font-weight: var(--font-regular);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    margin: 0 0;
+  }
+}

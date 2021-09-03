@@ -1,0 +1,16 @@
+.search {
+  position: relative;
+
+  i {
+    font-size: 18px;
+    color: var(--light-grey);
+    font-weight: var(--font-semi-bold);
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+  input {
+    width: 100%;
+  }
+}

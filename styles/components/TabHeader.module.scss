@@ -1,0 +1,32 @@
+.tabs {
+  display: flex;
+}
+
+.links {
+  font-size: 14px;
+  color: var(--light-grey);
+  font-family: var(--font-DMSans);
+  font-weight: var(--font-bold);
+}
+
+  .link,
+  .activeLink {
+    padding: 6px 12px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .activeLink {
+    background-color: var(--dark-grey);
+    color: var(--lighter-bg);
+    border-radius: 100px;
+  }
+
+
+@media screen and (max-width: 570px) {
+  .links {
+    width: 100%;
+    overflow-x: auto;
+  }
+}

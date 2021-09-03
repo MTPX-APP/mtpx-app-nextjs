@@ -1,0 +1,146 @@
+
+.mt {
+  margin-top: 1rem;
+}
+
+.main {
+  width: 1144px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.header {
+  h1 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+    color: var(--dark-grey);
+    font-weight: var(--font-bold);
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.4em;
+    color: var(--light-grey);
+    margin-bottom: 3rem;
+  }
+}
+
+.container {
+  width: 35vw;
+  margin: 3rem 0;
+
+  h3 {
+    margin: 2rem 0;
+    font-size: 1.2em;
+    color: var(--dark-grey);
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.4em;
+    color: var(--light-grey);
+    margin: 3rem 0 2rem 0;
+  }
+
+  .customlabel {
+    color: var(--light-grey);
+    font-size: 0.7em;
+    font-weight: var(--font-bold);
+    text-transform: uppercase; 
+    margin-top: 25px;
+    display: block;
+  }
+
+  .customtextarea {
+    margin: 20px 0 5px 0;
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid var(--lighter-grey);
+    background: none;
+    font-size: 14px;
+    line-height: 1.71429;
+    font-weight: var(--font-semi-regular);
+    color: var(--dark-grey);    
+    transition: border-color 0.2s;
+    padding: 10px 14px;
+  }
+
+  .inputlabel {
+    color: var(--light-grey);
+    font-size: 0.7em;
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    margin-top: 25px;
+    display: block;
+  }
+  
+  .dropdown {
+    margin: 20px 0 5px 0;
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid var(--lighter-grey);
+    background: none;
+    font-size: 14px;
+    line-height: 1.71429;
+    color: var(--dark-grey);
+    transition: border-color .2s;
+    font-weight: var(--font-semi-regular);
+    height: 48px;
+    padding-left: 5px;
+  }
+  
+  .inputtext {
+    margin: 20px 0 5px 0;
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid var(--lighter-grey);
+    background: none;
+    font-size: 14px;
+    line-height: 1.71429;
+    font-weight: var(--font-semi-regular);
+    color: var(--dark-grey);
+    transition: border-color .2s;
+    height: 48px;
+    padding: 0 14px;
+  }
+  
+  .buttondiv {
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+  
+    & .btnSubmit {
+      background-color: var(--light-blue);
+      border-color: var(--light-blue) !important;
+      font-size: 15px;
+      padding: 15px 30px;
+    }
+  
+    & .btnClear {
+      font-size: 15px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1144px) {
+
+  .main {
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+  }  
+
+  .container {
+    width: 100%;
+  }
+
+  .inputtext {
+    width: 100%;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+  
+}

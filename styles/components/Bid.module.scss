@@ -1,0 +1,119 @@
+.title {
+  margin-bottom: 32px;
+  font-size: 22px;
+  font-weight: var(--font-bold);
+  color: var(--darker-grey)
+}
+
+.info {
+  margin-bottom: 32px;
+  font-size: 14px !important;
+  line-height: 1.5;
+  color: var(--dark-grey);
+}
+
+.stage {
+  margin-bottom: 16px;
+  font-size: 20px;
+  line-height: 1.33333;
+  font-weight: var(--font-bold);  
+}
+
+.yourBid {
+
+  input {
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid var(--lighter-grey);
+    background: none;
+    font-size: 16px;
+    line-height: 1.71429;
+    font-weight: var(--font-semi-regular);
+    color: var(--dark-grey);
+    -webkit-transition: border-color 0.2s;
+    -moz-transition: border-color 0.2s;
+    transition: border-color 0.2s;
+    height: 48px;
+    color: var(--black);
+    padding: 0 14px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+  }
+
+  .currencyType {
+    border-width: 2px;
+    font-weight: var(--font-bold)
+  }
+
+}
+
+.row {
+  display: flex;
+  padding-top: 12px;
+}
+.row:first-child {
+  padding: 0 0 12px;
+  border-bottom: 1px solid #e6e8ec;
+  font-weight: 500;
+}
+:global(.dark-mode) .row:first-child {
+  border-color: #353945;
+}
+
+.col {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.col:first-child {
+  font-size: 14px !important;
+  color: var(--dark-grey);
+}
+.col:nth-child(2) {
+  margin-left: auto;
+  padding-left: 16px;
+  font-weight: 500;
+  font-size: 14px !important;
+  color: var(--dark-grey);
+}
+
+.btns {
+  margin-top: 32px;
+
+  .btnPrimary {
+    background-color: var(--light-blue);
+    border: none;
+    color: var(--lighter-bg);
+    padding: 14px 0;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--dark-blue);
+    }
+  }
+
+  .btnStroke {
+    background-color: transparent;
+    border: solid 2px var(--lighter-grey);
+    color: var(--dark-grey);
+    padding: 12px 0;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--dark-blue);
+      border-color: var(--dark-blue);
+      color: var(--lighter-bg);
+    }
+  }
+}
+
+.button {
+  width: 100%;
+}
+.button:not(:last-child) {
+  margin-bottom: 8px;
+}

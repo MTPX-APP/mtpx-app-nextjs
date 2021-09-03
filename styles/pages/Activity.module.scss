@@ -1,0 +1,196 @@
+.activityPageContainer {
+  width: 1144px;
+  margin: 0 auto;
+  padding: 40px 0;
+
+  & .columnContainer {
+    padding: 0;
+    width: 100%;
+
+    & .spinnerContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & .spinner {
+        width: 30px;
+        height: 30px;
+        stroke-width: 8px;
+        animation-name: spinAnimation;
+        animation-duration: 0.5s;
+        justify-content: center;
+      }
+    }
+  }
+
+  & .activity {
+    display: flex;
+    justify-content: space-between;
+
+    .filterBtn {
+      display: none;
+    }
+
+    .activityList {
+      width: 100%;
+    }
+
+    .filterChechList {
+      width: 450px;
+      margin-left: 20px;
+    }
+  }
+
+  
+
+  & .topContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 15px 50px 0px;
+
+    & h1 {
+      font-size: 40px;
+      font-weight: var(--font-bold);
+      color: var(--dark-grey);
+    }
+
+    & button {
+      border-width: 2px !important;
+      font-size: 13px;
+      font-weight: var(--font-bolder);
+      border-color: var(--lighter-grey) !important;
+    }
+  }
+
+  & .downContainer {
+    margin: 30px 15px 30px 0;
+
+    & .tabContainer {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+
+      & .tabInnerContainer {
+        margin-left: 15px;
+      }
+
+      & h4 {
+        font-size: 16px;
+        font-weight: var(--font-bold);
+      }
+      
+      & h5 {
+        font-size: 14px;
+        font-weight: var(--font-bold);
+        color: var(--light-grey);
+      }
+
+      & p {
+        font-size: 12px;
+        color: var(--light-text);
+      }
+    }
+
+    & .tabContainer::before {
+      position: absolute;
+      content: "";
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background-color: var(--light-blue);
+      right: 15px;
+    }
+
+    & .tabContainer:hover {
+      background-color: var(--light-bg);
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .activityPageContainer {
+    width: 100%;
+    & .columnContainer {
+      padding: 0 20px;
+    }
+
+    & .activity {
+      .activityList {
+        width: 60%;
+      }
+  
+      .filterChechList {
+        width: 40%;
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 972px) {
+  .activityPageContainer {
+    width: 100%;    
+    padding-top: 0;
+
+    & .columnContainer {
+      padding: 0 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .activityPageContainer {
+    width: 100%;   
+    
+    & .columnContainer {
+      padding: 0 20px;
+      margin-bottom: 40px;      
+    }
+
+    & .activity {
+      display: flex;
+      justify-content:unset;
+      flex-direction: column-reverse;
+      padding: 0;
+      
+      .filterBtn {
+        display: block;
+      }
+  
+      .activityList {
+        width: 100%;
+      }
+  
+      .filterChechList {
+        width: 100%;
+        margin-left: 0px;
+      }
+    }
+    & .topContainer {
+      display: block;
+      margin-bottom: 30px;
+
+      & .topContainerGroup {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0 0;
+      }
+    }
+
+    & .filterChechList {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    
+  }
+}
+
+
+
