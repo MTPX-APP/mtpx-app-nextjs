@@ -8,6 +8,7 @@ import { InputText } from "primereact/inputtext";
 import { imageAssets } from "../core/Constants";
 import CustomSelect from "./CustomSelect";
 import CookieBar from "./CookieBar";
+import Newsletter from "./Newsletter";
 
 import styles from "../styles/components/Footer.module.scss";
 
@@ -100,17 +101,7 @@ function Footer() {
           </div>
           <div  className={styles.columnFour}>
             <div className={styles.footerColumns4}>
-              <h6>Join Newsletter</h6>
-              <p>
-              Find out about latest on MintedPix and its community by subscribing to our e-newsletter!
-              </p>
-
-              <span className="p-input-icon-left ">
-                <InputText placeholder="Your Email" />
-                <button>
-                  <i className="pi pi-arrow-right" />
-                </button>
-              </span>
+              <Newsletter />
             </div>
           </div>
         </div>
