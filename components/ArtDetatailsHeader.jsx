@@ -22,16 +22,16 @@ function ArtDetailsHeader({
         <div className={styles.editHeader}>
             <Link href={backLink}>
             <a className={styles.backBtn}>
-                <i className="pi pi-arrow-left" /> {backLinkName}
+                <i className="pi pi-arrow-left" /> <span>{backLinkName}</span>
             </a>
             </Link>
             <div className={styles.editControls}>
-                <a className={`${styles.headerBtn} ${styles.noBorder}`}>
+                {/* <a className={`${styles.headerBtn} ${styles.noBorder} ${styles.viewsWrapper}`}>
                     <FontAwesomeIcon
                     icon={faEye}
                     className={styles.viewIcon}
                     /> <span>1,210</span>
-                </a>
+                </a> */}
                 <a className={styles.headerBtn}>
                     <FontAwesomeIcon
                     icon={faHeart}

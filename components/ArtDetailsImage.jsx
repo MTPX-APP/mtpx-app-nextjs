@@ -75,7 +75,7 @@ const ArtDetailsImage = ({expandIsActive, parentStyles, handleExpandView}) => {
           </div> */}
         </div>
         <div className="p-mt-3 p-d-flex p-jc-between">
-          {/* <div className={`p-d-flex ${styles.artIcons}`}>
+          <div className={`p-d-flex ${styles.artIcons}`}>
             <p className="p-mr-4 p-d-flex p-ai-center">
             <FontAwesomeIcon
               icon={faEye}
@@ -83,14 +83,14 @@ const ArtDetailsImage = ({expandIsActive, parentStyles, handleExpandView}) => {
               color={Colors.lightGrey}
               /> {"2, 100"}
             </p>
-            <p className="p-d-flex p-ai-center">
+            {/* <p className="p-d-flex p-ai-center">
             <FontAwesomeIcon
               icon={faHeart}
               className={styles.likeIcon}
               color={Colors.pink}
               /> {123}
-            </p>
-          </div> */}
+            </p> */}
+          </div>
           <div className={`p-mr-3`}>
             <div className={`${styles.artIcons} ${styles.artIconRight}`}>
               <div onClick={() => handleGallery()}>

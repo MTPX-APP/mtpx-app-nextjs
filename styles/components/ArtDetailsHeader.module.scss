@@ -96,7 +96,21 @@
 
 @media screen and (max-width: 600px) {
   .editHeader {
-    overflow-y: auto;
+    .backBtn {
+      i {
+        margin-right: 0;
+      }
+      span {display: none};
+    }
 
+  }
+
+  .editControls {
+    justify-content: flex-end;
+    width: 100%;
+
+    .viewsWrapper {
+      display: none;
+    }
   }
 }
