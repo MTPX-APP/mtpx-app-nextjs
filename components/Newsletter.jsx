@@ -24,14 +24,7 @@ const Newsletter = () => {
         formState: { errors }, 
         handleSubmit, 
         reset, 
-        setFocus 
     } = useForm({ defaultValues });
-
-    useEffect(() => {
-
-        setFocus("newsletterEmail");
-
-    }, [setFocus]);
 
     const onSubmit = async (data) => {
 
@@ -51,6 +44,7 @@ const Newsletter = () => {
 
         if (error) {
             pageToast.current.show({severity: 'error', life: 50000, summary: 'Error', detail: 'Sorry, we encountered a error submitting your newsletter'});  
+            reset();
             return;
         }
 

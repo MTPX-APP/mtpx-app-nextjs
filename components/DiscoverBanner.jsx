@@ -8,6 +8,7 @@ import Avatar from "./Avatar";
 import AuctionCard from "./AuctionCard";
 import CustomButton from "./CustomButton";
 import Modal from "../components/Modal";
+import SiteStat from "./SiteStat";
 import Connect from "./Connect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRecordVinyl, faHeart, faEye, faMedal  } from "@fortawesome/free-solid-svg-icons";
@@ -129,24 +130,9 @@ const DiscoverBanner = () => {
             </div>
           </div>
         </div>
-        {/* <div className={`p-d-flex p-jc-center p-my-6 ${styles.iconContainer}`}>
-          <i className="pi pi-arrow-left p-mr-3"></i>
-          <i className="pi pi-arrow-right p-ml-3"></i>
-        </div> */}
-        <div className={styles.auctionDetails}>
-          <div className="p-text-center">
-            <h1 className="p-mb-3">521k</h1>
-            <p>Items Sold</p>
-          </div>
-          <div className="p-text-center">
-            <h1 className="p-mb-3">$32m</h1>
-            <p>Paid to Creators</p>
-          </div>
-          <div className="p-text-center">
-            <h1 className="p-mb-3">219k</h1>
-            <p>Active Users</p>
-          </div>
-        </div>
+        
+        {/* <SiteStat activeUserCount={`1,900`} itemSoldCount={`3.5m`} paidCreatorCount={`100k`} /> */}
+        
       </div>
     </React.Fragment>
   );

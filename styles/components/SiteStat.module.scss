@@ -1,0 +1,30 @@
+.auctionDetails {
+    width: 779px;
+    margin: 30px auto 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      color: var(--darker-grey);
+      font-weight: var(--font-bold);
+      font-size: 38px;
+    }
+    p {
+      color: var(--light-grey);
+      font-family: var(--font-poppins);
+      font-weight: var(--font-semi-bold);
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 1150px) {
+    .auctionDetails {
+      width: 550px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .auctionDetails {
+      display: none;
+    }
+  }
