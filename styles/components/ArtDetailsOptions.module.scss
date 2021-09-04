@@ -90,14 +90,27 @@
   transition: fill 0.2s;
 }
 .item:hover {
-  color: #ef466f;
+  color: var(--light-blue);
 }
+
 .item:hover svg {
-  fill: #ef466f;
+  fill: var(--light-blue);
 }
 .item:not(:last-child) {
   border-bottom: 1px solid #e6e8ec;
 }
 :global(.dark-mode) .item:not(:last-child) {
   border-color: #353945;
+}
+
+@media screen and (max-width: 768px) {
+  .iconStyle {
+    & .miscIcon {
+      margin-right: 0;
+  
+    }
+    span {
+      display: none;
+    }
+  }
 }
