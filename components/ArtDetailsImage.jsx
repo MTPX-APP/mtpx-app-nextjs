@@ -5,9 +5,6 @@ import { Colors, imageAssets } from "../core/Constants";
 
 import styles from "../styles/components/ArtDetailsImage.module.scss";
 import ArtDetailsTab from "./ArtDetailsTab";
-
-
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faEye, faExpand, faCompress, faSearchPlus } from "@fortawesome/free-solid-svg-icons";
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -69,17 +66,16 @@ const ArtDetailsImage = ({expandIsActive, parentStyles, handleExpandView}) => {
             className={styles.artImage}
             alt="Art Image"
           />
-          <div className={`p-d-flex p-jc-center ${styles.imageTab}`}>
+          {/* <div className={`p-d-flex p-jc-center ${styles.imageTab}`}>
             <ArtDetailsTab />
-          </div>
-          <div className={`p-d-flex ${styles.imageText}`}>
-            <p className={styles.cat}>ART</p>
-            <p className={styles.cat}>ANIME</p>
+          </div> */}
+          {/* <div className={`p-d-flex ${styles.imageText}`}>
+
             <p className={styles.lock}>UNLOCKABLE</p>
-          </div>
+          </div> */}
         </div>
         <div className="p-mt-3 p-d-flex p-jc-between">
-          <div className={`p-d-flex ${styles.artIcons}`}>
+          {/* <div className={`p-d-flex ${styles.artIcons}`}>
             <p className="p-mr-4 p-d-flex p-ai-center">
             <FontAwesomeIcon
               icon={faEye}
@@ -94,7 +90,7 @@ const ArtDetailsImage = ({expandIsActive, parentStyles, handleExpandView}) => {
               color={Colors.pink}
               /> {123}
             </p>
-          </div>
+          </div> */}
           <div className={`p-mr-3`}>
             <div className={`${styles.artIcons} ${styles.artIconRight}`}>
               <div onClick={() => handleGallery()}>

@@ -1,15 +1,24 @@
 .iconStyle {
   color: #e6e8ec;
   border: 2px solid #e6e8ec;
-  border-radius: 50%;
+  border-radius: 30px;
   cursor: pointer;
   background: none;
-  width: 50px;
-  height: 50px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    color: var(--dark-grey);
+    font-weight: var(--font-bold);
+  }
 
   & .miscIcon {
     font-size: 18px;
     color: var(--light-text);
+    margin-right: 10px;
+
   }
 
   &:hover {
@@ -44,12 +53,13 @@
 
 .body {
   position: absolute;
-  right: 0;
-  bottom: calc(100% + 12px);
+  right: 5px;
+  top: 55px;
   width: 208px;
   padding: 16px 16px 20px;
   border-radius: 12px;
   background: #fcfcfd;
+  border: solid 2px var(--lighter-grey);
   box-shadow: 0px 16px 64px -16px rgba(31, 47, 70, 0.3);
   visibility: hidden;
   opacity: 0;

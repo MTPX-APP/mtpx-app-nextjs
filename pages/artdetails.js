@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { ArtDetailsContent, ArtDetailsImage } from "../components";
-import HeaderBreadCrumbs from "../components/HeaderBreadcrumbs";
+import ArtDetailsHeader from "../components/ArtDetatailsHeader";
 import styles from "../styles/pages/ArtDetails.module.scss";
 
 const ArtDetails = () => {
@@ -13,11 +13,9 @@ const ArtDetails = () => {
 
   return (
     <>
-    <HeaderBreadCrumbs
-        isHistoryBack={true}
+    <ArtDetailsHeader
+        backLink={`/`}
         backLinkName={`Back`}
-        breadcrumbBackName={`Discover`}
-        breadcrumbCurrentPageName={`Details`}
       />
 
       <div className={`${styles.container} ${isActive ? styles.expandView : ''}`}>

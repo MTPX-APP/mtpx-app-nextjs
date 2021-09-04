@@ -1,0 +1,95 @@
+.editHeader {
+  width: 1144px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  .backBtn {
+    border: var(--light-border);
+    border-radius: 90px;
+    padding: 10px 20px;
+    font-family: var(--font-DMSans);
+    font-weight: var(--font-bold);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: var(--light-grey);
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      border-color: var(--light-grey) !important;
+      color: var(--light-grey) !important;
+    }
+
+
+
+    i {
+      font-size: 12px;
+      color: var(--light-grey);
+      margin-right: 10px;
+      font-weight: var(--font-bolder);
+    }
+  }
+
+  .headerBtn {
+    border: var(--light-border);
+    border-radius: 90px;
+    padding: 10px 20px;
+    font-family: var(--font-DMSans);
+    font-weight: var(--font-bold);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: var(--light-text);
+    cursor: pointer;
+    margin-right: 10px;
+
+    &.noBorder {
+      border-color: transparent;
+      cursor: default;
+
+      svg {
+        
+        color: var(--black);
+      }
+    }
+
+    &:hover,
+    &:active {
+      color: var(--black) !important;
+    }
+
+    span {
+      color: var(--dark-grey);
+      font-size: 14px;
+    }
+
+    .likeIcon {
+      margin-right: 10px;
+      font-size: 16px;
+    }
+
+    .viewIcon {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+  }
+
+  & .editControls {
+    display: flex;
+    align-items: center;
+
+  
+  }
+}
+
+@media screen and (max-width: 1144px) {
+  .editHeader {
+    margin: 15px 0;
+    width: 100%;
+    padding: 0 20px;
+
+  }
+}
