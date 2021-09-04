@@ -101,3 +101,15 @@
 :global(.dark-mode) .item:not(:last-child) {
   border-color: #353945;
 }
+
+@media screen and (max-width: 768px) {
+  .iconStyle {
+    span {
+      display: none;
+    }
+  
+    & .miscIcon {
+      margin-right: 0; 
+    }
+  }
+}
