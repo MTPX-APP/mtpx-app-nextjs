@@ -477,8 +477,11 @@ small {
     border-radius: 8px;
 
     & .p-toast-message-content {
+      & .p-toast-message-icon {
+        display: none;
+      }
       & .p-toast-message-text {
-        margin: 0 0 0 1rem;
+        margin: 0 0 0 0;
         font-size: 13px;
         font-weight: var(--font-semi-bold);
       }
