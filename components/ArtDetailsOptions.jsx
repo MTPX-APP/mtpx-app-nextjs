@@ -4,7 +4,7 @@ import OutsideClickHandler from "react-outside-click-handler";
 import { Colors } from "../core/Constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faEllipsisH,
+  faCog,
 } from "@fortawesome/free-solid-svg-icons";
 import styles from "../styles/components/ArtDetailsOptions.module.scss";
 import Transfer from "./Transfer";
@@ -77,10 +77,10 @@ const ArtDetailsOptions = ({ className }) => {
             onClick={() => setVisible(!visible)}
           >
             <FontAwesomeIcon
-            icon={faEllipsisH}
+            icon={faCog}
             className={styles.miscIcon}
             color={Colors.lightGrey}
-          />
+          /> <span>Manage</span>
           </button>
           <div className={styles.body}>
             {items.map((x, index) => (

@@ -34,13 +34,19 @@ const ArtDetailsContent = ({parentStyles}) => {
             value="$4,422.87"
             borderColor={Colors.lighterGrey}
           />
-          <p>10 left</p>
+          <p>5/10 left</p>
         </div>
         <div className={styles.content}>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Consequuntur, inventore.
           </p>
+          
+          <h4 className={styles.contentHeader}>CATEGORY</h4>
+          <div className={styles.tagLinks}>
+            <Link href="/search" passHref><a><Tag value="Anime"></Tag></a></Link> 
+            <Link href="/search" passHref><a><Tag value="Art"></Tag></a></Link>
+          </div>
           
           <h4 className={styles.contentHeader}>TAGS</h4>
           <div className={styles.tagLinks}>
@@ -49,6 +55,9 @@ const ArtDetailsContent = ({parentStyles}) => {
             <Link href="/search/illustration" passHref><a><Tag value="illustration"></Tag></a></Link>
             <Link href="/search/design" passHref><a><Tag value="design"></Tag></a></Link>            
           </div>
+
+          <h4 className={styles.contentHeader}>UNLOCKABLE</h4>
+          <p className={styles.contentInfo}>This art is unlockable for accessibility upon purchase</p>
 
           <div className={styles.challengeWrapper}>
             <div className={styles.challenge}>

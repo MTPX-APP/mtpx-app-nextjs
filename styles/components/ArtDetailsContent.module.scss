@@ -91,6 +91,12 @@
     padding: 15px 0;
   }
 
+  .contentInfo {
+    font-size: 14px;
+    color: var(--dark-grey);
+    line-height: 1.6em;
+  }
+
   .tagLinks, .categoryLinks {
     a {
       color: var(--light-blue);
