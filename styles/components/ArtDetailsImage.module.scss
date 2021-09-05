@@ -14,6 +14,42 @@
     bottom: 40px;
     width: 100%;
   }
+
+  .likeDoubleClick {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    user-select: none;
+
+
+    // svg {
+    //   -webkit-filter: drop-shadow(1px 0px 15px rgba(0, 0, 0, 0.7));
+    //   filter: drop-shadow(1px 0px 15px rgba(0, 0, 0, 0.7));
+    // }
+  }
+}
+
+.fadeOut{
+  opacity:0;
+  width:0;
+  height:0;
+  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+
+}
+.fadeIn{
+  opacity:1;
+  width:100px;
+  height:100px;
+  transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+
 }
 
 .imageText {
@@ -55,7 +91,7 @@
   & .viewIcon {
     font-size: 20px;
     margin: 0 8px 0;
-    color: var(--light-grey);
+    color: var(--light-text);
   }
 
   & .likeIcon {
@@ -67,14 +103,14 @@
   & .expandIcon {
     font-size: 20px;
     margin: 0 8px 0;
-    color: var(--light-grey);
+    color: var(--light-text);
   }
 
   & .searchPlusIcon {
     font-size: 20px;
     margin: 0 8px 0;
     cursor: pointer;
-    color: var(--light-grey);
+    color: var(--light-text);
     &:hover {
       color: var(--dark-grey);
     }
