@@ -42,20 +42,21 @@ const WalletList = ({ items }) => {
               />
             )}
 
-            <p className="p-d-flex p-jc-between p-ai-center">
-              <div>
-              <div>{item.name}</div>
+            <div className={styles.item}>
+              <p>
+                <span>{item.name}</span>
 
-              {item.recommended && (
-                <div className={styles.tag}>Recommended</div>
-              )}
-              </div>
+                {item.recommended && (
+                  <span className={styles.tag}>Recommended</span>
+                )}
+              </p>
               {walletValue === item.name ? (
                 <span className={styles.arrowRight}>
                   <i className="pi pi-arrow-right"></i>
                 </span>
               ) : null}
-            </p>
+            </div>
+           
           </div>
         );
       })}
