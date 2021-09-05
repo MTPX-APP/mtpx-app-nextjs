@@ -2,7 +2,6 @@
 .btnBorder {
   background-color: var(--light-blue);
   color: var(--white);
-  border: none;
   outline: none;
   padding: 10px 15px;
   border-radius: 90px;
@@ -12,6 +11,7 @@
   font-family: var(--font-DMSans);
   font-weight: var(--font-semi-regular);
   white-space: nowrap;
+  border: solid 2px var(--light-blue);
 
   &:hover,
   &:active {

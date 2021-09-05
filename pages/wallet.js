@@ -2,8 +2,6 @@ import {
   WalletHeader,
   WalletList,
   WalletService,
-  WalletImage,
-  WalletScan,
 } from "../components";
 import { walletItem } from "../core/Constants";
 import styles from "../styles/pages/Wallet.module.scss";
@@ -15,8 +13,6 @@ const Wallet = () => {
       <div className={styles.walletContainer}>
         <WalletList items={walletItem} />
         <WalletService />
-        {/* <WalletImage /> */}
-        {/* <WalletScan /> */}
       </div>
     </div>
   );

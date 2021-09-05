@@ -12,6 +12,10 @@
     border-radius: 50%;
   }
 
+  .mark {
+    border-radius: 50%; 
+  }
+
   .walletIcon {
     color: var(--lighter-bg);
     font-size: 20px;
@@ -20,11 +24,18 @@
   }
 
   p {
-    color: var(--darker-grey);
+    color: var(--dark-grey);
     font-size: 24px;
     font-weight: var(--font-semi-bold);
     font-family: var(--font-poppins);
     width: 100%;
+    padding-left: 30px;
+  }
+
+  &:hover {
+    p {
+      color: var(--darker-grey);
+    }
   }
 }
 

@@ -12,8 +12,9 @@
   p {
     color: var(--light-grey);
     font-family: var(--font-poppins);
-    font-size: 12px;
+    font-size: 14px;
   }
+
   .imageContainer {
     width: 100%;
     height: 160px;
@@ -27,6 +28,26 @@
   }
 }
 
+.termsWrapper {
+  padding: 20px 0;
+
+  & > div {
+    margin-bottom: 15px;
+  }
+}
+
+.btnContainer {
+  margin: 0 0 20px;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+
+  .btnGetStarted {
+    margin-right: 20px;
+  }
+
+}
+
 .labelStyles {
   color: var(--black);
   font-family: var(--font-poppins);
@@ -38,11 +59,11 @@
   .container {
     width: 100%;
     h3 {
-      font-size: 32px;
+      font-size: 24px;
     }
     h3,
     p {
-      text-align: center;
+      text-align: left;
     }
   }
   .btnContainer {
