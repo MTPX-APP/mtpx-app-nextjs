@@ -31,8 +31,10 @@
 .termsWrapper {
   padding: 20px 0;
 
-  & > div {
+  & .checkboxWrapper {
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -44,13 +46,14 @@
 
   .btnGetStarted {
     margin-right: 20px;
+    button {
+      font-size: 16px;
+    }
   }
 
 }
 
 .labelStyles {
-  color: var(--black);
-  font-family: var(--font-poppins);
   font-size: 14px;
   font-weight: var(--font-semi-bold);
 }

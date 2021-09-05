@@ -5,6 +5,13 @@
   width: 544px;
   padding: 25px;
   border: solid 2px var(--white);
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
   
   i {
     width: 70px;
@@ -12,6 +19,10 @@
     display: grid;
     place-items: center;
     border-radius: 50%;
+  }
+
+  span {
+    display: block;
   }
 
   .mark {
@@ -31,9 +42,9 @@
     font-size: 24px;
     font-weight: var(--font-semi-bold);
     font-family: var(--font-poppins);
-    width: 100%;
     padding-left: 30px;
     display: block;
+    width: 100%;
   }
 
   .tag {
