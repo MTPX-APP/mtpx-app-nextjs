@@ -193,21 +193,25 @@ export const walletItem = [
     image: metamaskLogo,
     color: "#45B26B",
     name: "Metamask",
+    recommended: true,
   },
   {
     image: coinbaseLogo,
     color: "#3772FF",
     name: "Coinbase Wallet",
+    recommended: true,
   },
   {
     image: formaticLogo,
     color: "#9757D7",
     name: "Formatic",
+    recommended: false,
   },
   {
     image: walletConnectLogo,
     color: "#EF466F",
     name: "Wallet Connect",
+    recommended: false,
   },
 ];
 
