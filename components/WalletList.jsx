@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/components/WalletList.module.scss";
 
 const WalletList = ({ items }) => {
-  const [walletValue, setWalletValue] = useState("");
+  const [walletValue, setWalletValue] = useState("Metamask");
 
   const handleWallet = (item) => {
     setWalletValue(item);
