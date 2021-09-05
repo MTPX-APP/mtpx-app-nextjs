@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image"; 
 import styles from "../styles/components/WalletList.module.scss";
 
 const WalletList = ({ items }) => {
@@ -22,12 +23,23 @@ const WalletList = ({ items }) => {
             onClick={() => handleWallet(item.name)}
           >
             {walletValue === item.name ? (
-              <i className={`pi pi-check ${styles.activeIcon}`}></i>
+              <Image 
+                width={80} 
+                height={80} 
+                src={item.image} 
+                alt={item.name} 
+                className={styles.mark}
+                objectFit="cover"
+              />
             ) : (
-              <i
-                className={`pi pi-wallet ${styles.walletIcon}`}
-                style={{ backgroundColor: `${item.color}` }}
-              ></i>
+              <Image 
+                width={80} 
+                height={80} 
+                src={item.image} 
+                alt={item.name} 
+                className={styles.mark}
+                objectFit="cover"
+              />
             )}
 
             <p className="p-d-flex p-jc-between p-ai-center">

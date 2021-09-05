@@ -6,6 +6,13 @@
     color: var(--dark-grey);
     font-weight: var(--font-bold);
   }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 3rem;
+    color: var(--light-grey);
+    font-weight: var(--font-bold);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -17,5 +24,11 @@
     i {
       font-size: 18px;
     }
+    p {
+
+      margin-bottom: 0;
+
+    }
+  
   }
 }

@@ -31,7 +31,10 @@ import SamepleUser5 from '../public/images/photo-1535230464639-a413d00b9934.jpeg
 import SamepleUser6 from '../public/images/photo-1599834562135-b6fc90e642ca.jpeg';
 import SamepleUser7 from '../public/images/photo-1601412436009-d964bd02edbc.jpeg';
 
-
+import formaticLogo from '../public/images/wallet/formatic-logo.jpeg';
+import coinbaseLogo from '../public/images/wallet/coinbase-mark.jpeg';
+import metamaskLogo from '../public/images/wallet/metamask-mark.png';
+import walletConnectLogo from '../public/images/wallet/wallet-connect-mark.jpeg';
 
 export const imageAssets = {
   errorImage,
@@ -187,18 +190,22 @@ export const artDetailsLinks = ["Current", "Owners", "History", "Bids"];
 
 export const walletItem = [
   {
-    color: "#9757D7",
-    name: "Formatic",
+    image: metamaskLogo,
+    color: "#45B26B",
+    name: "Metamask",
   },
   {
+    image: coinbaseLogo,
     color: "#3772FF",
     name: "Coinbase Wallet",
   },
   {
-    color: "#45B26B",
-    name: "MyEtherWallet",
+    image: formaticLogo,
+    color: "#9757D7",
+    name: "Formatic",
   },
   {
+    image: walletConnectLogo,
     color: "#EF466F",
     name: "Wallet Connect",
   },
