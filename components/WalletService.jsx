@@ -75,9 +75,9 @@ const WalletService = () => {
         <div className={styles.btnGetStarted}>
           <CustomButton text="Get started now" btnStyle="Colored" />
         </div>
-        <div className={styles.btnCancel}>
+        {/* <div className={styles.btnCancel}>
           <CustomButton text="Cancel" />
-        </div>
+        </div> */}
       </div>
 
       <p>We do not own your private keys and cannot access your funds without your confirmation.</p>
