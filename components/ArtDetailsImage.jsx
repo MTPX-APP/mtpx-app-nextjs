@@ -1,10 +1,10 @@
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Galleria } from 'primereact/galleria';
 import { Colors, imageAssets } from "../core/Constants";
+import Helpers from '../core/Utils/Helpers';
 
 import styles from "../styles/components/ArtDetailsImage.module.scss";
-import ArtDetailsTab from "./ArtDetailsTab";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faEye, faExpand, faCompress, faSearchPlus } from "@fortawesome/free-solid-svg-icons";
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -15,6 +15,8 @@ config.autoAddCss = false
 const ArtDetailsImage = ({expandIsActive, parentStyles, handleExpandView}) => {
 
   const gallery1 = useRef(null);
+  const [showLike, setShowLike]  = useState(false);
+  const [showFadeOut, setShowFadeOut]  = useState(false);
 
   const itemTemplate = (item) =>{
     return <div className={styles.fullscreenImage}><Image src={item.imageSrc} alt={item.alt} /></div>;
@@ -43,6 +45,19 @@ const ArtDetailsImage = ({expandIsActive, parentStyles, handleExpandView}) => {
     gallery1.current.show();
   }
 
+  const dblClick = Helpers.useSingleAndDoubleClick(function() {
+    console.log(1);
+  }, function() {
+    setShowLike(true);
+    setTimeout(() => {
+      setShowFadeOut(true);
+      setTimeout(() => { 
+        setShowLike(false);
+        setShowFadeOut(false);
+      }, 1000);
+    }, 1000);
+  });
+
   return (
     <>
       <div className={`${styles.container} ${parentStyles.expandViewImageContainer}`}>
@@ -57,15 +72,17 @@ const ArtDetailsImage = ({expandIsActive, parentStyles, handleExpandView}) => {
         showThumbnails={false}
       ></Galleria>
         <div className={` ${styles.imageContainer}`}>
-          <Image
-            src={imageAssets.artDetailsImage}
-            width={640}
-            height={768}
-            layout="responsive"
-            objectFit="cover"
-            className={styles.artImage}
-            alt="Art Image"
-          />
+          
+            <Image
+              src={imageAssets.artDetailsImage}
+              width={640}
+              height={768}
+              layout="responsive"
+              objectFit="cover"
+              className={styles.artImage}
+              alt="Art Image"
+            />
+          
           {/* <div className={`p-d-flex p-jc-center ${styles.imageTab}`}>
             <ArtDetailsTab />
           </div> */}
@@ -73,6 +90,15 @@ const ArtDetailsImage = ({expandIsActive, parentStyles, handleExpandView}) => {
 
             <p className={styles.lock}>UNLOCKABLE</p>
           </div> */}
+          <div className={styles.likeDoubleClick} onClick={dblClick}>
+          { showLike &&
+            <FontAwesomeIcon
+                icon={faHeart}
+                className={`${styles.likeIcon} ${showFadeOut && styles.fadeOut}`}
+                color={Colors.pink}
+                />
+            }
+          </div>
         </div>
         <div className="p-mt-3 p-d-flex p-jc-between">
           <div className={`p-d-flex ${styles.artIcons}`}>
