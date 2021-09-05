@@ -4,6 +4,8 @@
   cursor: pointer;
   width: 544px;
   padding: 25px;
+  border: solid 2px var(--white);
+  
   i {
     width: 70px;
     height: 64px;
@@ -21,6 +23,7 @@
     font-size: 20px;
     margin-right: 25px;
     padding: 0 12px;
+    
   }
 
   p {
@@ -30,6 +33,20 @@
     font-family: var(--font-poppins);
     width: 100%;
     padding-left: 30px;
+    display: block;
+  }
+
+  .tag {
+    font-size: 14px;
+    color: var(--white);
+    background-color: var(--light-blue);
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    top: -5px;
+
   }
 
   &:hover {
