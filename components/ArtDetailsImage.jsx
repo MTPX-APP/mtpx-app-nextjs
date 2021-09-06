@@ -76,17 +76,27 @@ const ArtDetailsImage = ({
           showThumbnails={false}
         ></Galleria>
         <div className={` ${styles.imageContainer}`}>
-          
-            <Image
-              src={imageAssets.artDetailsImage}
-              width={640}
-              height={expandIsActive ? 400 : 768}
-              layout="responsive"
-              objectFit={expandIsActive ? `contain` : `cover`}
-              className={styles.artImage}
-              alt="Art Image"
-            />
-          
+          {
+            expandIsActive ? (
+              <Image
+                src={imageAssets.artDetailsImage}
+                layout="fill"
+                objectFit={`contain`}
+                className={styles.artImage}
+                alt="Art Image"
+              />
+            ) : (
+              <Image
+                src={imageAssets.artDetailsImage}
+                width={640}
+                height={768}
+                layout="responsive"
+                objectFit={`cover`}
+                className={styles.artImage}
+                alt="Art Image"
+              />
+            )
+          }
           <div className={styles.likeDoubleClick} onClick={dblClick}>
           { showLike &&
             <FontAwesomeIcon
