@@ -99,7 +99,7 @@ const ArtDetailsImage = ({
               />
             )
           }
-Z          <div className={styles.likeDoubleClick} onClick={dblClick}>
+          <div className={styles.likeDoubleClick} onClick={dblClick}>
           { showLike &&
             <FontAwesomeIcon
                 icon={faHeart}
