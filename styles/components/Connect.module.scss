@@ -12,6 +12,29 @@
   fill: #fcfcfd;
 }
 
+.connectIcons {
+  margin: 72px auto 32px;
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-gap: 36px;
+
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+   
+    .mark {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--white);
+      border: solid 1px var(--lighter-grey) !important;
+    }
+  }
+}
+
 .info {
   margin-bottom: 32px;
   text-align: center;
