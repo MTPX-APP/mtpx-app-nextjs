@@ -3,6 +3,15 @@
   margin: 25px auto 50px;
   display: flex;
   justify-content: space-between;
+  
+  &.expandView {
+    & .innerContainer {
+      width: 1144px;
+      margin: 0 auto 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 
   & .btnExpandIcon {
     cursor: pointer;
@@ -13,6 +22,7 @@
   }
 
   &.expandView {
+    width: 100%;
     display: block !important;
 
     & .expandViewImageContainer {
@@ -48,6 +58,12 @@
   .container {
     width: 100%;
     padding: 0 20px;   
+
+    &.expandView {
+      & .innerContainer {
+        width: 100%;
+      }
+    }
   }
  
 }

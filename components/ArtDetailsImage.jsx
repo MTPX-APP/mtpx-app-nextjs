@@ -12,7 +12,11 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
 
-const ArtDetailsImage = ({expandIsActive, parentStyles, handleExpandView}) => {
+const ArtDetailsImage = ({
+  expandIsActive, // Handles if expandIsActive
+  parentStyles, // Handles parent style cascade down
+  handleExpandView, // Handles onClick toggle
+  }) => {
 
   const gallery1 = useRef(null);
   const [showLike, setShowLike]  = useState(false);
@@ -60,36 +64,29 @@ const ArtDetailsImage = ({expandIsActive, parentStyles, handleExpandView}) => {
 
   return (
     <>
-      <div className={`${styles.container} ${parentStyles.expandViewImageContainer}`}>
-      <Galleria 
-        ref={gallery1} 
-        value={imagCollection} 
-        item={itemTemplate}  
-        fullScreen
-        responsiveOptions={responsiveOptions}
-        numVisible={1}
-        showItemNavigators={false}
-        showThumbnails={false}
-      ></Galleria>
+      <div className={`${styles.container} ${parentStyles.expandViewImageContainer} ${expandIsActive ? styles.expandViewInner : ''}`}>
+        <Galleria 
+          ref={gallery1} 
+          value={imagCollection} 
+          item={itemTemplate}  
+          fullScreen
+          responsiveOptions={responsiveOptions}
+          numVisible={1}
+          showItemNavigators={false}
+          showThumbnails={false}
+        ></Galleria>
         <div className={` ${styles.imageContainer}`}>
           
             <Image
               src={imageAssets.artDetailsImage}
               width={640}
-              height={768}
+              height={expandIsActive ? 400 : 768}
               layout="responsive"
-              objectFit="cover"
+              objectFit={expandIsActive ? `contain` : `cover`}
               className={styles.artImage}
               alt="Art Image"
             />
           
-          {/* <div className={`p-d-flex p-jc-center ${styles.imageTab}`}>
-            <ArtDetailsTab />
-          </div> */}
-          {/* <div className={`p-d-flex ${styles.imageText}`}>
-
-            <p className={styles.lock}>UNLOCKABLE</p>
-          </div> */}
           <div className={styles.likeDoubleClick} onClick={dblClick}>
           { showLike &&
             <FontAwesomeIcon
@@ -100,7 +97,7 @@ const ArtDetailsImage = ({expandIsActive, parentStyles, handleExpandView}) => {
             }
           </div>
         </div>
-        <div className="p-mt-3 p-d-flex p-jc-between">
+        <div className={`p-mt-3 p-d-flex p-jc-between ${styles.imageControls}`}>
           <div className={`p-d-flex ${styles.artIcons}`}>
             <p className="p-mr-4 p-d-flex p-ai-center">
             <FontAwesomeIcon
@@ -109,13 +106,6 @@ const ArtDetailsImage = ({expandIsActive, parentStyles, handleExpandView}) => {
               color={Colors.lightGrey}
               /> {"2, 100"}
             </p>
-            {/* <p className="p-d-flex p-ai-center">
-            <FontAwesomeIcon
-              icon={faHeart}
-              className={styles.likeIcon}
-              color={Colors.pink}
-              /> {123}
-            </p> */}
           </div>
           <div className={`p-mr-3`}>
             <div className={`${styles.artIcons} ${styles.artIconRight}`}>
