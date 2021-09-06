@@ -26,7 +26,7 @@ const DiscoverBanner = () => {
   return (
     <React.Fragment>
       <Modal show={showModal} onClose={() => setShowModal(false)}>
-        <Connect />
+        <Connect onClose={() => setShowModal(false)} />
       </Modal>
       <div className={styles.wrapper}>
         <div className={styles.container}>
