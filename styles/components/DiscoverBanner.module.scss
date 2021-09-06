@@ -148,6 +148,10 @@
     color: var(--green);
     height: 33px;
     margin: 0 10px 0 0px;
+    
+    .value {
+      color: var(--light-blue) !important;
+    }
   }
 }
 .avatarContainer {

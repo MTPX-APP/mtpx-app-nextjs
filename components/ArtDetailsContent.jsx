@@ -28,7 +28,7 @@ const ArtDetailsContent = ({parentStyles}) => {
       <div className={`${styles.container} ${parentStyles.expandViewContentInfo} `}>
         <h3 className={styles.heading}>The amazing art</h3>
         <div className={`p-d-flex p-ai-center ${styles.priceTag}`}>
-          <PriceTag color={Colors.secondaryGreen} value="2.5 ETH" />
+          <PriceTag color={Colors.lightBlue} value="2.5 ETH" />
           <PriceTag
             color={Colors.lightGrey}
             value="$4,422.87"
