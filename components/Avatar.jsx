@@ -19,7 +19,6 @@ const Avatar = ({ width, height, src, alt, isVerified }) => {
         src={src} 
         alt={alt} 
         objectFit="cover"
-        placeholder="blur"
       />
       {isVerified && <div className={styles.badge}> <FontAwesomeIcon
             icon={faCheck}
