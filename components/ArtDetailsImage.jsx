@@ -84,6 +84,7 @@ const ArtDetailsImage = ({
                 objectFit={`contain`}
                 className={styles.artImage}
                 alt="Art Image"
+                placeholder="blur"
               />
             ) : (
               <Image
@@ -94,10 +95,11 @@ const ArtDetailsImage = ({
                 objectFit={`cover`}
                 className={styles.artImage}
                 alt="Art Image"
+                placeholder="blur"
               />
             )
           }
-          <div className={styles.likeDoubleClick} onClick={dblClick}>
+Z          <div className={styles.likeDoubleClick} onClick={dblClick}>
           { showLike &&
             <FontAwesomeIcon
                 icon={faHeart}

@@ -57,6 +57,7 @@ const DiscoverBanner = () => {
                 objectFit="cover"
                 className={styles.artImage}
                 alt="Art Image"
+                placeholder="blur"
               />
             </div>
 

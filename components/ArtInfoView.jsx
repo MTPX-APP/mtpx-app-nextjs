@@ -53,6 +53,7 @@ function ArtInfoView({
           objectFit="cover"
           width={400}
           height={300}
+          placeholder="blur"
         />
       </div>
       <div className={styles.contentContainer}>
