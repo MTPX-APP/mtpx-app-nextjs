@@ -11,7 +11,7 @@ import Modal from "../components/Modal";
 import SiteStat from "./SiteStat";
 import Connect from "./Connect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRecordVinyl, faHeart, faEye, faMedal  } from "@fortawesome/free-solid-svg-icons";
+import { faBolt, faHeart, faEye, faMedal  } from "@fortawesome/free-solid-svg-icons";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
@@ -74,14 +74,9 @@ const DiscoverBanner = () => {
                   </div>
                 </div>
                 <div className={`p-d-flex p-ai-center ${styles.pillContainer}`}>
-                  <FontAwesomeIcon
-                  icon={faRecordVinyl}
-                  pull="left"
-                  className={styles.instantPrice}            
-                  />
-                  <div>
-                    <p>Instant price</p>
-                    <p>3.5 ETH</p>
+                  <div className={styles.instantPrice}>
+                    <p>Buy now price</p>
+                    <p className={styles.value}>3.5 ETH</p>
                   </div>
                 </div>
               </div>

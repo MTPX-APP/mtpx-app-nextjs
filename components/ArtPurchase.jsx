@@ -56,19 +56,11 @@ const ArtPurchase = () => {
         <div className={`p-d-flex ${styles.btnContainer}`}>
           <div>
             <CustomButton
-              text="Purchase now"
+              text="Buy now"
               btnStyle="Colored"
               handleClick={handlePurchase}
             />
           </div>
-
-          {/* <div>
-            <CustomButton
-              text="Test"
-              btnStyle="Colored"
-              handleClick={handleTest}
-            />
-          </div> */}
           <div>
             <CustomButton text="Place a bid" handleClick={handleClick} />
           </div>

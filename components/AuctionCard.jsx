@@ -12,7 +12,7 @@ const AuctionCard = () => {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.bidInfo}>
-        <p className={styles.darkStyle}>Current Highest Bid</p>
+        <p className={styles.darkStyle}>Current Bid</p>
         <div className={styles.AvatarWrapper}>
           <Avatar src={imageAssets.SamepleUser2} width={50} height={50} />
           <div className={styles.content}>
