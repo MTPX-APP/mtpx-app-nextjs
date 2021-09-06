@@ -7,20 +7,22 @@ import styles from "../styles/pages/ArtDetails.module.scss";
 
 const ArtDetails = () => {
   const [isActive, setActive] = useState(false);
+
   const handleExpandView = () => {
     setActive(!isActive);
   }
 
   return (
     <>
-    <ArtDetailsHeader
+      <ArtDetailsHeader
         backLink={`/`}
         backLinkName={`Back`}
       />
-
       <div className={`${styles.container} ${isActive ? styles.expandView : ''}`}>
-        <ArtDetailsImage parentStyles={styles} expandIsActive={isActive} handleExpandView={handleExpandView}/>
-        <ArtDetailsContent parentStyles={styles}/>
+        <ArtDetailsImage parentStyles={styles} expandIsActive={isActive} handleExpandView={handleExpandView} />
+        <div className={`${styles.innerContainer}`}>
+          <ArtDetailsContent parentStyles={styles}/>
+        </div>
       </div>
     </>
   );

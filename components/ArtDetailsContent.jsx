@@ -37,6 +37,7 @@ const ArtDetailsContent = ({parentStyles}) => {
           <p>5/10 left</p>
         </div>
         <div className={styles.content}>
+          <h4 className={styles.contentHeader}>DESCRIPTION</h4>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Consequuntur, inventore.
@@ -78,13 +79,12 @@ const ArtDetailsContent = ({parentStyles}) => {
             </div>
           </div>
           
-          <ArtPurchase />
-         
         </div>
         
       </div>
       
       <div className={`${parentStyles.expandViewContentPlaceBid} `}>
+      <ArtPurchase />
         <div className={styles.tabContainer}>
           <TabHeader links={artDetailsLinks} />
         </div>
