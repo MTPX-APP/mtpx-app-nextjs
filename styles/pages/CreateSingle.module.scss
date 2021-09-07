@@ -16,6 +16,13 @@
   flex-basis: auto;
   display: flex;
 
+  .preview {
+    img {
+      border-radius: 16px;
+      width: 100%;
+    }
+  }
+
   .headerdiv {
     display: flex;
     justify-content: space-between;
@@ -77,6 +84,21 @@
       display: none;
       &.active {
         display: block;
+      }
+    }
+
+    .fileResult {
+      margin: 10px 0;
+      
+      p {
+        &:first-child {
+          font-size: 14px;
+          color: var(--light-grey);
+        }
+        &:last-child {
+          font-size: 13px;
+          color: var(--light-text);
+        }
       }
     }
 
