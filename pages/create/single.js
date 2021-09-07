@@ -241,10 +241,9 @@ const Single = () => {
     if (file.objectURL) {
       setMintImage(file.objectURL);
       setFileName(file.name);
-      setFileDate(new Date().toLocaleDateString());
-      setValue(file.name);
+      setFileDate(new Date().toLocaleDateString());      
       setValue('itemFile', file.name)
-    }
+    } 
     //setFileName(file.name);
     //setFileDate(new Date().toLocaleDateString());
         // file: Current file object.
@@ -318,7 +317,7 @@ const Single = () => {
                 name="itemFile" 
                 url="" 
                 accept="image/*" 
-                maxFileSize={1000000} 
+                maxFileSize={3000000} 
                 onError={onTemplateClear}
                 onClear={onTemplateClear}
                 onUpload={onBasicUpload} 
