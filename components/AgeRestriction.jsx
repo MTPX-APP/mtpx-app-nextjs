@@ -17,7 +17,7 @@ const AgeRestriction = ({ styles, fieldName, fieldView, fieldOnChange, fieldStat
 			Age Restriction  
 			<span onClick={setAgeRestrictionContentClick}><i className={`pi pi-question-circle tooltip-icon`}></i></span>
 			</h3>
-			<p>Please select the age level for the art you are posting.</p>
+			<div><small>Please select the age level for the art you are posting.</small></div>
 			<div>
 				<Dropdown
 				id={fieldName}

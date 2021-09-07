@@ -238,14 +238,36 @@ const Single = () => {
 
           {/*Upload files*/}
           <h3>Upload Files</h3> 
-          <Card id="upload" className={styles.uploadcard}>
-            <div>
-              <h5> PNG, GIF, WEBP, MP4 or MP3. MAX 1GB</h5>              
-            </div>
-            <div className={styles.uploadWrapper}>
-              <FileUpload mode="basic" name="demo[]" url="" accept="image/*" maxFileSize={1000000} onUpload={onBasicUpload} auto chooseLabel="Browse"  />
-            </div>
-          </Card>
+          
+            <Controller 
+              name="itemFile" 
+              control={control} 
+              rules={{ 
+                required: 'File is required.'
+              }} 
+              render={({ field, fieldState }) => (
+                <Card id="upload" className={`${styles.uploadcard} ${classNames({'p-error-border': fieldState.invalid })}`}>
+                  <div>
+                    <h5> PNG, GIF, WEBP, MP4 or MP3. MAX 1GB</h5>              
+                  </div>
+                  <div className={styles.uploadWrapper}>
+                    <FileUpload 
+                      id={field.name} {...field} 
+                      mode="basic" 
+                      name="itemFile" 
+                      url="" 
+                      accept="image/*" 
+                      maxFileSize={1000000} 
+                      onUpload={onBasicUpload} 
+                      innerRef={register}
+                      chooseLabel="Browse"  
+                      className={`p-d-block ${styles.inputtext} ${classNames({'p-invalid': fieldState.invalid })}`} 
+                      />
+                      </div>
+                </Card>
+                )} />
+
+            
 
           <h3>Item Details</h3>
 
@@ -309,6 +331,9 @@ const Single = () => {
             onChange={(e) => handleTag(e.value)} 
             max={5} 
             allowDuplicate={false}
+            id="tags"
+            name="tags"
+            innerRef={register}
             separator=","></Chips>
 
 
@@ -548,9 +573,10 @@ const Single = () => {
             <h3 id="category" name="category" className={styles.h3}>
               Category
             </h3>
-            <label htmlFor="collection" className={`p-d-block ${styles.sliderlabel}`}>
+            {/* <label htmlFor="collection" className={`p-d-block ${styles.sliderlabel}`}>
               Select the category this belongs to: 
-            </label>
+            </label> */}
+            <div><small>Select the category this belongs to</small></div>
             <Controller 
               name="category" 
               control={control} 

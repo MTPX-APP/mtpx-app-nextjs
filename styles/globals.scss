@@ -87,6 +87,11 @@ small {
   <Override PrimeReact Components>
 */
 
+/* <Errors> */
+.p-error-border {
+  border-color: var(--red) !important;
+}
+
 /* <Dialogs> */
 .p-dialog {
   border-radius: 10px;

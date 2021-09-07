@@ -8,9 +8,7 @@ const SliderInput = ({ title, name, label, styles, value, handleChange }) => {
         <h3 id={name} name={name} className={styles.h3}>
           {title}
         </h3>
-        <label htmlFor={name} className={`p-d-block ${styles.sliderlabel}`}>
-          {label}
-        </label>
+        <div><small>{label}</small></div>
       </div>
       <div>
         <InputSwitch checked={value} onChange={(e) => handleChange(e.value)} />
