@@ -91,6 +91,7 @@
       margin: 10px 0;
       
       p {
+        padding: 5px 0;
         &:first-child {
           font-size: 14px;
           color: var(--light-grey);
@@ -98,6 +99,7 @@
         &:last-child {
           font-size: 13px;
           color: var(--light-text);
+
         }
       }
     }

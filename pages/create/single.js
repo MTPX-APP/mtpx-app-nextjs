@@ -229,6 +229,8 @@ const Single = () => {
     // console.log(file);
     if (file.objectURL) {
       setMintImage(file.objectURL);
+      setFileName(file.name);
+      setFileDate(new Date().toLocaleDateString());
     }
     //setFileName(file.name);
     //setFileDate(new Date().toLocaleDateString());
@@ -395,8 +397,7 @@ const Single = () => {
             allowDuplicate={false}
             id="tags"
             name="tags"
-            separator=","
-            {...register("tags")}      
+            separator=","                
             ></Chips>
 
 
