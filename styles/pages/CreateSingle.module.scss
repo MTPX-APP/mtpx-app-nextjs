@@ -507,6 +507,14 @@
 @media screen and (max-width: 992px) {
   .previewWrapper {
     margin-top: 60px;
+
+    .preview {
+      img {
+        border-radius: 16px;
+        width: 100%;
+      }
+    }
+
   }
 
   .maindiv {
