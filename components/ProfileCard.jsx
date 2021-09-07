@@ -60,7 +60,7 @@ const ProfileCard = () => {
         </div>
         <div className={styles.btngrp}>
           <Button label="Follow" className={`p-button-rounded ${styles.btnFollow}`} />
-          <ProfileShare />
+          <ProfileShare shareUrl={`http://www.mintedpix.com`}/>
           <Button
             icon="pi pi-flag"
             className={`p-button-rounded p-button-outlined  ${styles.btnReport}`}
