@@ -268,13 +268,9 @@ const Single = () => {
 
       <Modal show={previewClick} onClose={() => setPreviewClick(false)}>
         <div className={styles.previewWrapper}>
-          <CreatePreview
-            mintImage={imageAssets.SamepleImage7}
-            userImage={imageAssets.SamepleUser2}
-            artName={artName} 
-            price={price} 
-            userName={userName} 
-            burnPrice={burnPrice}/>
+            <div className={styles.preview}>
+              <img src={mintImage} />
+            </div>
         </div>
       </Modal>
       
