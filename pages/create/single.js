@@ -47,6 +47,7 @@ const Single = () => {
   // Preview
   const [previewClick,setPreviewClick]=useState(false);
   const [artName, setArtName] = useState('');
+  const [mintImage, setMintImage] = useState(imageAssets.errorImage.src);
   const [price, setPrice] = useState(null);
   const [userName, setUserName] = useState('John Doe');
   const [burnPrice, setBurnPrice] = useState(null);
@@ -107,7 +108,9 @@ const Single = () => {
   }
 
   // FormSubmit
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({
+    tags: tagValue
+  });
   const [royalties, setRoyalties] = useState(
     [
       { name: '10%', code: '10' },
@@ -144,7 +147,7 @@ const Single = () => {
     itemFile: '',
     itemName: '',
     itemDescription: '',
-    tags: [],
+    tags: tagValue,
     royalty: null,
     size: '',
     properties: '',
@@ -167,18 +170,11 @@ const Single = () => {
     formState: { errors }, 
     handleSubmit, 
     reset, 
-    setFocus,    
+    setFocus,   
+    setValue, 
   } = useForm({ defaultValues });
 
-  useEffect(() => {
-
-    if(blockedPanel) {
-        setTimeout(() => {
-          setBlockedPanel(false);
-          pageToast.current.show({severity: 'success', summary: 'Success Message', detail: 'Update Successfully'});   
-        }, 3000);
-    }
-  }, [blockedPanel, setFocus]);
+ 
 
   const onSubmit = (data) => {
     console.log(data);
@@ -188,20 +184,80 @@ const Single = () => {
       // reset();
   };
 
-  const handleReset = () => {
-    reset();
-  }
-
   const getFormErrorMessage = (name) => {
     return errors[name] && <small className="p-error">{errors[name].message}</small>
   };
 
+
+  /* FILE UPLOAD */
+
+  const fileUploadRef = useRef(null);
+  const [fileName, setFileName] = useState(null);
+  const [fileDate, setFileDate] = useState(null);
+  const [totalSize, setTotalSize] = useState(0);
+
+  const myUploader = (event) => {
+      //console.log(event);
+      //event.files == files to upload
+  }
+
+
+  /* Clear upload template */
+  const onTemplateClear = () => {
+      console.log('clear');
+      setMintImage(imageAssets.errorImage.src);
+      setTotalSize(0);
+      setFileName(null);
+      setFileDate(null);
+  }
+
+  /* Verified Image Fail */
+  const onValidationFail = (res) => {
+    pageToast.current.show({severity: 'error', summary: 'Error', detail: 'Theres issue with the file you uploaded, please check the supported file type or size of your image'});  
+  }
+
+  const headerTemplate = (options) => {
+    const { chooseButton, cancelButton } = options;
+    return (
+        <>
+            {chooseButton}
+            {cancelButton}
+        </>
+    );
+  }
+  const customItemTemplate = (file, props) => {
+    // console.log(file);
+    if (file.objectURL) {
+      setMintImage(file.objectURL);
+    }
+    //setFileName(file.name);
+    //setFileDate(new Date().toLocaleDateString());
+        // file: Current file object.
+    // options.onRemove: Event used to remove current file in the container.
+    // options.previewElement: The default preview element in the container.
+    // options.fileNameElement: The default fileName element in the container.
+    // options.sizeElement: The default size element in the container.
+    // options.removeElement: The default remove element in the container.
+    // options.formatSize: The formated size of file.
+    // options.element: Default element created by the component.
+    // options.props: component props.
+  }
+
+  useEffect(() => {
+    if(blockedPanel) {
+        setTimeout(() => {
+          setBlockedPanel(false);
+          pageToast.current.show({severity: 'success', summary: 'Success Message', detail: 'Update Successfully'});   
+        }, 3000);
+    }
+  }, [blockedPanel]);
 
 
   return (
     /*Main div*/
     
     <>
+      <Toast ref={pageToast} /> 
       <Tooltip target=".pageTooltip"/>
 
       <Modal show={submitClick} onClose={() => setSubmitClick(false)}>
@@ -239,38 +295,44 @@ const Single = () => {
           {/*Upload files*/}
           <h3>Upload Files</h3> 
           
-            <Controller 
-              name="itemFile" 
-              control={control} 
-              rules={{ 
-                required: 'File is required.'
-              }} 
-              render={({ field, fieldState }) => (
-                <Card id="upload" className={`${styles.uploadcard} ${classNames({'p-error-border': fieldState.invalid })}`}>
-                  <div>
-                    <h5> PNG, GIF, WEBP, MP4 or MP3. MAX 1GB</h5>              
-                  </div>
-                  <div className={styles.uploadWrapper}>
-                    <FileUpload 
-                      id={field.name} {...field} 
-                      mode="basic" 
-                      name="itemFile" 
-                      url="" 
-                      accept="image/*" 
-                      maxFileSize={1000000} 
-                      onUpload={onBasicUpload} 
-                      innerRef={register}
-                      chooseLabel="Browse"  
-                      className={`p-d-block ${styles.inputtext} ${classNames({'p-invalid': fieldState.invalid })}`} 
-                      />
-                      </div>
-                </Card>
-                )} />
-
             
+          <Card id="upload" className={`${styles.uploadcard}`}>
+            <div>
+              <h5> PNG, GIF, WEBP, MP4 or MP3. MAX 1GB</h5>              
+            </div>
+            <div className={styles.uploadWrapper}>
+              <FileUpload 
+                // mode="basic" 
+                ref={fileUploadRef}
+                name="itemFile" 
+                url="" 
+                accept="image/*" 
+                maxFileSize={1000000} 
+                onError={onTemplateClear}
+                onClear={onTemplateClear}
+                onUpload={onBasicUpload} 
+                onValidationFail={onValidationFail}
 
+
+                itemTemplate={customItemTemplate} 
+                headerTemplate={headerTemplate} 
+                uploadHandler={myUploader}
+                chooseLabel="Browse"           
+                />
+            </div>
+            { (fileName && fileDate) && (
+            <div className={styles.fileResult}>
+              <p>
+                { fileName }
+              </p>
+              <p>
+                { fileDate }
+              </p>
+            </div>
+            )}
+          </Card>
+          
           <h3>Item Details</h3>
-
           <div>
             <label
               htmlFor={`itemName`}
@@ -324,7 +386,7 @@ const Single = () => {
               className="pageTooltip" data-pr-tooltip="Start typing tags, hit return to complete. Hit backspace or 'x' to remove a tag." data-pr-position="top"
             ><i className={`pi pi-question-circle tooltip-icon`}></i></span>
           </label>
-
+                
           <Chips 
             className={styles.chipInput}
             value={tagValue} 
@@ -333,8 +395,9 @@ const Single = () => {
             allowDuplicate={false}
             id="tags"
             name="tags"
-            innerRef={register}
-            separator=","></Chips>
+            separator=","
+            {...register("tags")}      
+            ></Chips>
 
 
 
@@ -672,13 +735,16 @@ const Single = () => {
         {/*Card Component*/}
         <div className={`${styles.profilecarddiv}`}>
           <h3>Preview</h3>
-          <CreatePreview
+          <div className={styles.preview}>
+            <img src={mintImage} />
+          </div>
+          {/* <CreatePreview
             mintImage={imageAssets.SamepleImage7}
             userImage={imageAssets.SamepleUser2}
             artName={artName} 
             price={price} 
             userName={userName} 
-            burnPrice={burnPrice}/>
+            burnPrice={burnPrice}/> */}
         </div>
       </div>
     </>

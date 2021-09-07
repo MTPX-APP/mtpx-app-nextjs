@@ -183,20 +183,32 @@ small {
   }
 }
 
-/* <Buttons> */
-.p-button {
-  &.p-fileupload-choose {
-    border-radius: 50px;
-    border: solid 2px var(--light-grey);
-    background: transparent;
-    color: var(--light-grey);
-    font-size: 14px;
+/* <Upload> */
+.p-fileupload {
 
-    &:hover {
-      border-color: var(--light-blue) !important;
-      background-color: transparent !important;
-      color: var(--light-blue) !important;
-    }
+  .p-fileupload-buttonbar {
+    border-width: 0;
+    background-color: transparent;
+  }
+
+  .p-fileupload-content {
+    display: none;
+  }
+
+  .p-button {
+      margin: 0 8px;
+      border-radius: 50px;
+      border: solid 2px var(--light-grey);
+      background: transparent;
+      color: var(--light-grey);
+      font-size: 14px;
+  
+      &:hover {
+        border-color: var(--light-blue) !important;
+        background-color: transparent !important;
+        color: var(--light-blue) !important;
+      }
+    
   }
 }
 
