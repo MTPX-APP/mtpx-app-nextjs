@@ -171,7 +171,7 @@ small {
 .p-inputtext {
   font-weight: var(--font-semi-bold) !important;
   font-size: 14px !important;
-  color: var(--darker-grey) !important;
+  color: var(--darker-grey);
   padding: 10px 15px !important;
   &.p-dropdown-label {
     padding: 10px !important;
@@ -342,7 +342,7 @@ small {
 
 /* <dropdown> */
 .p-dropdown {
-  border: 2px solid var(--lighter-grey);
+  border-width: 2px;
   background-color: var(--white) !important;
 }
 
@@ -351,6 +351,8 @@ small {
   display: flex;
   padding-left: 10px;
   font-size: 14px;
+  color: var(--dark-grey);
+  
 }
 
 .p-dropdown-panel {
@@ -379,6 +381,43 @@ small {
   }
 }
 
+/* <MultiSelect> */
+.p-multiselect {
+  border-width: 2px;
+  background-color: var(--white) !important;
+
+  .p-multiselect-label {
+    align-items: center;
+    display: flex;
+    padding-left: 10px;
+    font-size: 14px;
+    color: var(--dark-grey);
+    font-weight: var(--font-semi-bold);
+  }
+
+  .p-multiselect-trigger-icon {
+    border: 2px solid var(--lighter-grey);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+  
+    &.pi-angle-down::before {
+      position: relative;
+      top: 3px;
+      left: 3px;
+      font-size: 15px;
+    }
+  }
+}
+.p-multiselect-panel {
+  .p-multiselect-items {
+    .p-multiselect-item {
+      font-size: 14px;
+    }
+  }
+} 
+
+/* <Carousel> */
 .p-carousel-indicator {
   display: none;
 }
@@ -428,9 +467,9 @@ small {
 .p-chips {
   .p-chips-multiple-container {
     .p-chips-token {
-      background-color: var(--pale-blue);
+      background-color: var(--darker-grey);
       border-radius: 5px;
-      color: var(--darker-grey);
+      color: var(--lighter-bg);
       .p-chips-token-icon {
         font-weight: var(--font-bolder);
         opacity: 0.7;

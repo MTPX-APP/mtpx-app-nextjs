@@ -167,7 +167,7 @@
     /*  inputs */
 
     .inputGroup {
-      margin: 5px 0 20px;
+      margin: 5px 0 5px;
       span {
         border-radius: 12px;
         font-size: 14px;
@@ -178,7 +178,7 @@
     
       input {
         border-radius: 12px;
-        border: 2px solid var(--lighter-grey);
+        border-width: 2px;
         background: none;
         font-size: 14px;
         line-height: 1.71429;
@@ -187,7 +187,8 @@
         transition: border-color 0.2s;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        
+        margin: 0;
+
       }
     }
     
@@ -197,7 +198,7 @@
         margin: 10px 0 0 0;
         width: 100%;
         border-radius: 12px;
-        border: 2px solid var(--lighter-grey);
+        border-width: 2px;
         background: none;
         font-size: 14px;
         line-height: 1.71429;
@@ -224,25 +225,37 @@
     }
     
     .dropdown {
-      margin: 10px 0;
+      margin: 10px 0 5px;
       width: 100%;
       border-radius: 12px;
-      border: 2px solid var(--lighter-grey);
+      border-width: 2px;
       background: none;
       font-size: 14px;
       line-height: 1.71429;
-      color: var(--dark-grey);
       transition: border-color .2s;
       font-weight: var(--font-semi-regular);
       height: 48px;
       padding-left: 5px;
     }
-    
-    .inputtext {
-      margin: 10px 0 0 0;
+
+    .multiselect {
+      margin: 10px 0 5px;
       width: 100%;
       border-radius: 12px;
-      border: 2px solid var(--lighter-grey);
+      border-width: 2px;
+      background: none;
+      font-size: 14px;
+      line-height: 1.71429;
+      transition: border-color .2s;
+      font-weight: var(--font-semi-regular);
+      padding-left: 5px;
+    }
+    
+    .inputtext {
+      margin: 10px 0 5px;
+      width: 100%;
+      border-radius: 12px;
+      border-width: 2px;
       background: none;
       font-size: 14px;
       line-height: 1.71429;
@@ -251,6 +264,21 @@
       transition: border-color .2s;
       height: 48px;
       padding: 0 14px;
+    }
+
+    .fees {
+      display: flex;
+      margin: 20px 0 0 0;
+      
+      label {
+        &:last-child {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    small {
+      font-weight: var(--font-bold);
     }
 
     .inputtext.textarea {
