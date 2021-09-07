@@ -68,6 +68,9 @@ const Single = () => {
   // Tags
   const handleTag = (value) => {
     setTagValue(value);
+
+    setValue('tags', value);
+    getValues('tags');
   }
 
   // Upload
@@ -77,24 +80,27 @@ const Single = () => {
 
   // OnSale Function
   const handleOnSale = value => {
-    setOnSaleValue(value);
-    register("isOnSaleBid")
+    setOnSaleValue(value);   
+    setValue('isOnSaleBid', value);
     value ? setAllSaleValue(true) : setAllSaleValue(false);
   }
 
   // Challenge Function
   const handleOnChallenge = value => {
+    setValue('isMintedChallenge', value);
     setChallengeValue(value);
   }
 
   // Instant Price Function
   const handleInstantPrice = value => {
     setInstantPriceValue(value);
+    setValue('isInstantPrice', value);
     value ? setAllSaleValue(true) : setAllSaleValue(false);
   }
 
   // Unlock Price Function
   const handleUnlockPrice = value => {
+    setValue('isUnlock', value);
     setUnlockPriceValue(value);
   }
 
@@ -178,6 +184,10 @@ const Single = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+
+    if (getValues('itemFile') === '') {
+      pageToast.current.show({severity: 'error', summary: 'Image required', detail: 'Please upload your art image'});  
+    }
       // setFormData(data);
       // setShowMessage(true);
       // setBlockedPanel(true);
@@ -209,6 +219,7 @@ const Single = () => {
       setTotalSize(0);
       setFileName(null);
       setFileDate(null);
+      setValue('itemFile', '');
   }
 
   /* Verified Image Fail */
@@ -231,6 +242,8 @@ const Single = () => {
       setMintImage(file.objectURL);
       setFileName(file.name);
       setFileDate(new Date().toLocaleDateString());
+      setValue(file.name);
+      setValue('itemFile', file.name)
     }
     //setFileName(file.name);
     //setFileDate(new Date().toLocaleDateString());
@@ -310,8 +323,6 @@ const Single = () => {
                 onClear={onTemplateClear}
                 onUpload={onBasicUpload} 
                 onValidationFail={onValidationFail}
-
-
                 itemTemplate={customItemTemplate} 
                 headerTemplate={headerTemplate} 
                 uploadHandler={myUploader}
