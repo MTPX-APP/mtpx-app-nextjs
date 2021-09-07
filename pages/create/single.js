@@ -30,7 +30,7 @@ import HeaderBreadCrumbs from "../../components/HeaderBreadcrumbs";
 import TermsAgreement from "../../components/TermsAgreement";
 import Modal from  "../../components/Modal";
 
-import styles from "../../styles/pages/CreateSingle.module.scss";
+import styles from "../../styles/pages/CreateSingleMultiple.module.scss";
 import { imageAssets, categoryList } from "../../core/Constants";
 
 

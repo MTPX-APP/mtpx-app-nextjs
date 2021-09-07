@@ -474,6 +474,23 @@
   }
 }
 
+.multiple {
+  .formdiv {
+    .inputdisplay {
+      &.royalty {
+        .field {
+          width: 55%;
+        }
+    
+        .quantity {
+          width: 40%;
+        }
+      }
+    }
+  }
+  
+}
+
 @media screen and (max-width: 1025px) {
   .maindiv {
     width: 100%;
