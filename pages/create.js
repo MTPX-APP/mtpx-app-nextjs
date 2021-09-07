@@ -25,7 +25,7 @@ const CreateHome = () => {
         <div className={styles.carddiv}>
           <Card className={styles.card}>
             <div className={styles.cardSingle}></div>
-            <Link href="/createSingle" passHref>
+            <Link href="/create/single" passHref>
               <Button className={`p-button-rounded ${styles.btnMint}`}>
                 <a>Create Single</a>              
               </Button>
@@ -33,7 +33,7 @@ const CreateHome = () => {
           </Card>
           <Card className={styles.card}>
             <div className={styles.cardMultiple}></div>
-            <Link href="/createSingle" passHref>
+            <Link href="/create/multiple" passHref>
               <Button className={`p-button-rounded ${styles.btnMint}`}>
                 Create Multiple
               </Button>

@@ -7,26 +7,26 @@ import { Divider } from "primereact/divider";
 import { Chips } from 'primereact/chips';
 import { Tooltip } from 'primereact/tooltip';
 
-import InputItem from "../components/InputItem";
+import InputItem from "../../components/InputItem";
 import { InputText } from "primereact/inputtext";
 import { InputTextarea } from "primereact/inputtextarea";
-import SliderInput from "../components/SliderInput";
-import AgeRestriction from "../components/AgeRestriction";
-import Categories from "../components/Categories";
-import DropdownItem from "../components/DropdownItem";
-import CreatePreview from "../components/CreatePreview";
+import SliderInput from "../../components/SliderInput";
+import AgeRestriction from "../../components/AgeRestriction";
+import Categories from "../../components/Categories";
+import DropdownItem from "../../components/DropdownItem";
+import CreatePreview from "../../components/CreatePreview";
 import { FileUpload } from 'primereact/fileupload';
-import FolowSteps from "../components/FolowSteps";
-import CreateGuidelines from "../components/CreateGuidelines";
-import HeaderBreadCrumbs from "../components/HeaderBreadcrumbs";
-import TermsAgreement from "../components/TermsAgreement";
-import Modal from  "../components/Modal";
+import FolowSteps from "../../components/FolowSteps";
+import CreateGuidelines from "../../components/CreateGuidelines";
+import HeaderBreadCrumbs from "../../components/HeaderBreadcrumbs";
+import TermsAgreement from "../../components/TermsAgreement";
+import Modal from  "../../components/Modal";
 
-import styles from "../styles/pages/CreateSingle.module.scss";
-import { imageAssets } from "../core/Constants";
+import styles from "../../styles/pages/CreateSingle.module.scss";
+import { imageAssets } from "../../core/Constants";
 
 
-const CreateSingle = () => {
+const Multiple = () => {
   // UseTranslation
   const { t } = useTranslation('createSingle');
 
@@ -120,7 +120,7 @@ const CreateSingle = () => {
         backLink={`/create`}
         backLinkName={`Back`}
         breadcrumbBackName={`Create`}
-        breadcrumbCurrentPageName={`Single Collection`}
+        breadcrumbCurrentPageName={`Multiple Collection`}
       />
 
       <div className={styles.maindiv}>
@@ -128,7 +128,7 @@ const CreateSingle = () => {
         <div className={`${styles.formdiv}`}>
           {/*Header div*/}
           <div className={styles.headerdiv}>
-            <h1>Create single collectible</h1>
+            <h1>Create multiple collectible</h1>
           </div>
 
           {/*Upload files*/}
@@ -385,4 +385,4 @@ export const getStaticProps = async ({ locale }) => ({
 })
 
 
-export default CreateSingle;
+export default Multiple;
