@@ -2,40 +2,19 @@ import React, { useState } from "react";
 import cn from "classnames";
 import OutsideClickHandler from "react-outside-click-handler";
 import Icon from "./Icon.js";
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  TwitterShareButton,
+} from "react-share";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import styles from "../styles/components/ProfileShare.module.scss";
 config.autoAddCss = false
 
-const ProfileShare = ({ className }) => {
+const ProfileShare = ({ className, shareUrl }) => {
   const [visible, setVisible] = useState(false);
-  const items = [
-    {
-      title: "Facebook",
-      icon: "facebook",
-      action: () => {
-        setVisible(false);        
-        // Link to Facebook
-      },
-    },
-    {
-      title: "Twitter",
-      icon: "twitter",
-      action: () => {
-        setVisible(false);        
-        // Link to Twitter
-      },
-    },
-    {
-      title: "Copy Link",
-      icon: "copy",
-      action: () => {
-        setVisible(false);
-        // Copy URL
-      },
-    }
-  ];
-
+  
   return (
     <>
       <OutsideClickHandler onOutsideClick={() => setVisible(false)}>
@@ -51,12 +30,26 @@ const ProfileShare = ({ className }) => {
             <Icon name="share" size="20" className={styles.shareIcon}/>
           </button>
           <div className={styles.body}>
-            {items.map((x, index) => (
-              <div className={styles.item} key={index} onClick={x.action}>
-                <Icon name={x.icon} size="20" />
-                <span>{x.title}</span>
-              </div>
-            ))}
+              <FacebookShareButton url={shareUrl}>
+                <div className={styles.item} onClick={() => setVisible(false)}>
+                  <Icon name={`facebook`} size="20" />
+                  <span>Facebook</span>
+                </div>
+              </FacebookShareButton>
+
+              <TwitterShareButton url={shareUrl}>
+                <div className={styles.item} onClick={() => setVisible(false)}>
+                  <Icon name={`twitter`} size="20" />
+                  <span>Twitter</span>
+                </div>
+              </TwitterShareButton>
+
+              <EmailShareButton url={shareUrl}>
+                <div className={styles.item} onClick={() => setVisible(false)}>
+                  <Icon name={`copy`} size="20" />
+                  <span>Email</span>
+                </div>
+              </EmailShareButton>
           </div>
         </div>
       </OutsideClickHandler>     

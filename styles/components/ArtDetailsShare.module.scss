@@ -18,7 +18,7 @@
     svg {
       fill: var(--darker-grey) !important;
     }    
-  }  
+  }
 }
 
 
@@ -60,6 +60,10 @@
   transform: translateY(3px);
   transition: all 0.2s;
   z-index: 1;
+
+  button {
+    display: block;
+  }
 }
 :global(.dark-mode) .body {
   background: #23262f;
