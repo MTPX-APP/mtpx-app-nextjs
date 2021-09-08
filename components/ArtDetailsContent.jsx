@@ -8,7 +8,7 @@ import Link from "next/link";
 import PriceTag from "./PriceTag";
 import ArtPurchase from "./ArtPurchase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMedal } from "@fortawesome/free-solid-svg-icons";
+import { faMedal, faLock } from "@fortawesome/free-solid-svg-icons";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import styles from "../styles/components/ArtDetailsContent.module.scss";
@@ -42,6 +42,21 @@ const ArtDetailsContent = ({parentStyles}) => {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Consequuntur, inventore.
           </p>
+
+          <div className={styles.propertyWrapper}>
+            <div className={styles.column}>
+              <h4 className={styles.contentHeader}>SIZE</h4>
+              <p>
+                1000x1000 
+              </p>
+            </div>
+            <div className={styles.column}>
+              <h4 className={styles.contentHeader}>PROPERTIES</h4>
+              <p>
+                Spacesuit
+              </p>
+            </div>
+          </div>
           
           <h4 className={styles.contentHeader}>CATEGORY</h4>
           <div className={styles.tagLinks}>
@@ -57,17 +72,14 @@ const ArtDetailsContent = ({parentStyles}) => {
             <Link href="/search/design" passHref><a><Tag value="design"></Tag></a></Link>            
           </div>
 
-          <h4 className={styles.contentHeader}>SIZE</h4>
-          <p>
-            1000x1000 
-          </p>
+         
 
-          <h4 className={styles.contentHeader}>PROPERTIES</h4>
-          <p>
-            Spacesuit
-          </p>
-
-          <h4 className={styles.contentHeader}>UNLOCKABLE</h4>
+          <h4 className={styles.contentHeader}>
+              <FontAwesomeIcon
+                icon={faLock}
+                className={styles.lockIcon}/>
+                UNLOCKABLE
+              </h4>
           <p className={styles.contentInfo}>This art is unlockable for accessibility upon purchase</p>
 
           <div className={styles.challengeWrapper}>
