@@ -16,7 +16,7 @@ const dropdownValue = [
 ];
 
 const Home = () => {
-  const [ authenticate, setAuthenticate ] = useState(true);
+  const [ authenticate, setAuthenticate ] = useState(false);
   const { t } = useTranslation('common');
 
   return (
