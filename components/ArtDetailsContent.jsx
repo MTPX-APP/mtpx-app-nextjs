@@ -75,7 +75,7 @@ const ArtDetailsContent = ({parentStyles}) => {
 
          
 
-          <h4 className={styles.contentHeader}>
+          <h4 className={`${styles.contentHeader} ${styles.unlockableContent}`}>
               <FontAwesomeIcon
                 icon={faLock}
                 className={styles.lockIcon}/>
