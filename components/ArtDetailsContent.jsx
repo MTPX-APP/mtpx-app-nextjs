@@ -57,6 +57,16 @@ const ArtDetailsContent = ({parentStyles}) => {
             <Link href="/search/design" passHref><a><Tag value="design"></Tag></a></Link>            
           </div>
 
+          <h4 className={styles.contentHeader}>SIZE</h4>
+          <p>
+            1000x1000 
+          </p>
+
+          <h4 className={styles.contentHeader}>PROPERTIES</h4>
+          <p>
+            Spacesuit
+          </p>
+
           <h4 className={styles.contentHeader}>UNLOCKABLE</h4>
           <p className={styles.contentInfo}>This art is unlockable for accessibility upon purchase</p>
 
