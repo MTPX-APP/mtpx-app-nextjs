@@ -18,7 +18,7 @@ const ArtDetails = () => {
         backLink={`/`}
         backLinkName={`Back`}
       />
-      <div className={`${styles.container} ${isActive ? styles.expandView : ''}`}>
+      <div className={`${styles.container} ${isActive ? styles.expandView : styles.collapseView}`}>
         <ArtDetailsImage parentStyles={styles} expandIsActive={isActive} handleExpandView={handleExpandView} />
         <div className={`${styles.innerContainer}`}>
           <ArtDetailsContent parentStyles={styles}/>
