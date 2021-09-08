@@ -1,14 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMedal  } from "@fortawesome/free-solid-svg-icons";
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false;
 
 import { Button } from "primereact/button";
 import { imageAssets } from "../core/Constants";
-
-
 import styles from "../styles/components/Banner.module.scss";
-
-
 
 export default function Banner() {
   return (
@@ -17,11 +18,14 @@ export default function Banner() {
         className={styles.wrapper}
       >
         <div className={styles.container}>
-          <div className="p-grid p-align-center">
-          <div className="p-col-12 p-md-8 p-lg-8">
+          <div className={styles.inner}>
+          <div className={styles.leftColumn}>
             <div className={styles.bannerColumns}>
-              <p className={styles.lightText}>
-                CHALLENGE YOUR CREATIVITY. <strong>LEARN MORE</strong>
+              <p className={styles.subheader}>
+              <FontAwesomeIcon
+                      icon={faMedal}
+                      className={styles.challengeIcon}/>
+                CHALLENGE YOUR CREATIVITY                
               </p>
               <h1>{`Create a unique original character`}</h1>
 
@@ -45,14 +49,18 @@ export default function Banner() {
                   />               
                 </Link>
               </div>
+              <Link href="/faq" passHref>
+                <a className={styles.footer}> <i className="pi pi-info-circle"></i> <small>Learn more about Challenges</small></a>
+                </Link>
             </div>
           </div>
-          <div className={`p-col-12 p-md-4 p-lg-4 ${styles.bannerImage}`} align={"middle"}>
-              <div className={styles.bannerColumns}>
+          <div className={`${styles.rightColumn} ${styles.bannerImage}`} align={"middle"}>
+              <div className={styles.imageColumns}>
                 <Image
-                  src={imageAssets.OlympicLogo}
-                  alt="olympic logo"
-                  width={400}
+                  src={imageAssets.SampleChallenge1}
+                  alt="Challenge1"
+                  height={700}
+                  className={styles.image}
                   objectFit={"contain"}
                 />
               </div>
