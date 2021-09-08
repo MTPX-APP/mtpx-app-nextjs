@@ -27,7 +27,7 @@ const ArtDetailsContent = ({parentStyles}) => {
     <div className={`${styles.contentContainer} ${parentStyles.expandViewContentContainer}`}>
       <div className={`${styles.container} ${parentStyles.expandViewContentInfo} `}>
         <h3 className={styles.heading}>The amazing art</h3>
-        <div className={`p-d-flex p-ai-center ${styles.priceTag}`}>
+        {/* <div className={`p-d-flex p-ai-center ${styles.priceTag}`}>
           <PriceTag color={Colors.lightBlue} value="2.5 ETH" />
           <PriceTag
             color={Colors.lightGrey}
@@ -35,7 +35,8 @@ const ArtDetailsContent = ({parentStyles}) => {
             borderColor={Colors.lighterGrey}
           />
           <p>5/10 left</p>
-        </div>
+        </div> */}
+        <ArtPurchase />
         <div className={styles.content}>
           <h4 className={styles.contentHeader}>DESCRIPTION</h4>
           <p>
@@ -106,7 +107,6 @@ const ArtDetailsContent = ({parentStyles}) => {
       </div>
       
       <div className={`${parentStyles.expandViewContentPlaceBid} `}>
-      <ArtPurchase />
         <div className={styles.tabContainer}>
           <TabHeader links={artDetailsLinks} />
         </div>
