@@ -105,6 +105,7 @@ const ArtDetailsImage = ({
           { showLike &&
             <FontAwesomeIcon
                 icon={faHeart}
+                size="sm"
                 className={`${styles.likeIcon} ${showFadeOut && styles.fadeOut}`}
                 color={Colors.pink}
                 />
