@@ -1,28 +1,48 @@
 import React, { useState } from "react";
 import { useTranslation } from 'next-i18next'
+import { Colors, imageAssets } from "../core/Constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBolt, faHeart, faEye, faMedal  } from "@fortawesome/free-solid-svg-icons";
+import { config } from '@fortawesome/fontawesome-svg-core'
+
 import styles from "../styles/components/DiscoverBanner.module.scss";
+import Helpers from '../core/Utils/Helpers';
 import Image from "next/image";
-import { imageAssets } from "../core/Constants";
 import Link from "next/link";
 import Avatar from "./Avatar";
 import AuctionCard from "./AuctionCard";
 import CustomButton from "./CustomButton";
 import Modal from "../components/Modal";
-import SiteStat from "./SiteStat";
 import Connect from "./Connect";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBolt, faHeart, faEye, faMedal  } from "@fortawesome/free-solid-svg-icons";
-import { config } from '@fortawesome/fontawesome-svg-core'
+
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
 const DiscoverBanner = () => {
   const { t } = useTranslation('discoverBanner');
+  const [showLike, setShowLike]  = useState(false);
+  const [showFadeOut, setShowFadeOut]  = useState(false);
   const [showModal, setShowModal] = useState(false);
 
   const handleClick = () => {
     setShowModal(true);
   };
+
+  const dblClick = Helpers.useSingleAndDoubleClick(function() {
+    console.log('singleclick');
+    // Initial Click
+  }, function() {
+    console.log('doublecheck');
+    setShowLike(true);
+    setTimeout(() => {
+      setShowFadeOut(true);
+      setTimeout(() => { 
+        setShowLike(false);
+        setShowFadeOut(false);
+      }, 1000);
+    }, 1000);
+  });
+
   return (
     <React.Fragment>
       <Modal show={showModal} onClose={() => setShowModal(false)}>
@@ -49,6 +69,16 @@ const DiscoverBanner = () => {
 
           <div className={styles.imgBidContainer}>
             <div className={styles.imageContainer} >
+              <div className={styles.likeDoubleClick} onClick={dblClick}>
+              { showLike &&
+                <FontAwesomeIcon
+                    icon={faHeart}
+                    size="sm"
+                    className={`${styles.likeIcon} ${showFadeOut && styles.fadeOut}`}
+                    color={Colors.pink}
+                    />
+                }
+              </div>
               <Image
                 src={imageAssets.SamepleImage7}
                 width={320}
