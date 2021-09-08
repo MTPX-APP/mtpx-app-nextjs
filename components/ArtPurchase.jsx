@@ -56,7 +56,7 @@ const ArtPurchase = () => {
         <div className={`p-d-flex ${styles.btnContainer}`}>
           <div>
             <CustomButton
-              text="Buy now"
+              text="Buy for 2.563 ETH"
               btnStyle="Colored"
               handleClick={handlePurchase}
             />
