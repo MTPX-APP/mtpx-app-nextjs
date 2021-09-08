@@ -70,6 +70,9 @@
   width: 325px;
   transition: transform 250ms;
   position: relative;
+  overflow: hidden;
+  transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
 
   .artImage {
     border-radius: 24px;    
@@ -362,4 +365,17 @@
       font-size: 36px;
     }
   }
+}
+
+/* <Floating> */
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }

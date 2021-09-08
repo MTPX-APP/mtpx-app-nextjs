@@ -46,10 +46,10 @@ function Footer() {
               MintedPix is an invitation only NFT marketplace for distinguished creators and their patrons. Join and inspire our community now!
               </p>
               <div className={styles.footerSocial}>
-                <Link href="//instagram.com/"><a><Icon name='instagram' size='20' fill='#555' /></a></Link>
-                <Link href="//twitter.com/"><a><Icon name='twitter' size='20'  fill='#555' /></a></Link>
-                <Link href="//facebook.com/"><a><Icon name='facebook' size='20'  fill='#555'/></a></Link>
-                <Link href="//pinterest.com/"><a><Icon name='pinterest' size='20'  fill='#555'/></a></Link>
+                <Link href="https://instagram.com/" passHref><a><Icon name='instagram' size='20' fill='#555' /></a></Link>
+                <Link href="https://twitter.com/" passHref><a><Icon name='twitter' size='20'  fill='#555' /></a></Link>
+                <Link href="https://facebook.com/" passHref><a><Icon name='facebook' size='20'  fill='#555'/></a></Link>
+                <Link href="https://pinterest.com/" passHref><a><Icon name='pinterest' size='20'  fill='#555'/></a></Link>
               </div>
               <p>
                 <strong>Language</strong>

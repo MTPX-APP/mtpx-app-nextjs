@@ -1,4 +1,3 @@
-import isArray from 'lodash/isArray';
 
 class Util {
 
