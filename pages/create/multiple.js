@@ -605,8 +605,7 @@ const Multiple = () => {
                     } 
                     render={({ field, fieldState }) => (
                       <InputText 
-                        id={field.name} {...field} 
-                        autoFocus
+                        id={field.name} {...field}
                         aria-describedby="unlockCode"
                         maxLength={256}
                         placeholder="Tip: Markdown syntax is supported"
@@ -620,7 +619,7 @@ const Multiple = () => {
           
          
           {/*Challenge*/}
-          <SliderInput
+          {/* <SliderInput
             title="MintedPix Challenge"
             name="nft"
             label="Participate in a challenge to showoff your skills"
@@ -661,7 +660,7 @@ const Multiple = () => {
                 />
               )} />
               {getFormErrorMessage('challenge')}
-          </div>
+          </div> */}
            {/*Divider*/}
            <Divider className={styles.divider} />
 

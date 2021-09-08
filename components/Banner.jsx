@@ -23,7 +23,7 @@ export default function Banner() {
               <p className={styles.lightText}>
                 CHALLENGE YOUR CREATIVITY. <strong>LEARN MORE</strong>
               </p>
-              <h1>{`Create a minted art of a Olympic Athlete`}</h1>
+              <h1>{`Create a unique original character`}</h1>
 
               <p>
                 {`Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -31,14 +31,14 @@ export default function Banner() {
               </p>
               <div className={styles.couponWrapper}>
                   <p>
-                    <span className={styles.lightText}>use code:</span> {`Olympics2021`}
+                    <span className={styles.lightText}>use code:</span> {`originalcharacter2021`}
                   </p>
                   <p>
-                    <span className={styles.lightText}>Ends:</span> {`August 1st 2021`}
+                    <span className={styles.lightText}>Ends:</span> {`August 1st 2022`}
                   </p>
               </div>
               <div className={styles.buttonContainer}>
-                <Link href="/create" passHref>
+                <Link href="/create/single" passHref>
                   <Button
                     label="Create Now."
                     className={`p-button-rounded ${styles.btnCreateNow}`}
