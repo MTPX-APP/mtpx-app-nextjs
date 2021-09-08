@@ -1,67 +1,125 @@
 .wrapper {
-  padding: 64px 0;
-  background-color: #2955bf;
+  padding: 100px 0;
+  background-color: var(--white);
+  border-top: solid 1px var(--lighter-grey);
 }
 
 .container {
   width: 1144px;
   margin: 0 auto;
 
-  .couponWrapper {
+  .inner {
     display: flex;
-    align-content: left;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
 
-    p {
-      margin-right: 20px;
-    }
-  }
-}
+    .leftColumn {
+      width: 50%;
 
-.btnCreateNow {
-  border: 2px solid rgba(255,255,255,.8);
-  padding: 10px 20px;
-  border-radius: 40px;
-  background-color: transparent;
-  font-size: 15px;
-}
+      .bannerColumns {
+        color: var(--darker-grey);
+        font-family: var(--font-poppins);
+      
+        .subheader {
+          color: var(--light-text);
+          font-weight: var(--font-bold);
+          display: flex;
+          align-items: center;
 
-.bannerColumns {
-  color: #ffff;
-  font-family: var(--font-poppins);
+          .challengeIcon {
+            font-size: 26px;
+            margin-right: 10px;
+          }
+        }
 
+        .footer {
+          display: flex;
+          align-items: center;
+          color: var(--light-grey);
+          i {
+            position: relative;
+            top:2px;
+          }
+          small {
+            color: var(--lighter-blue);
+          }
+          display: block;
+          margin: 20px 0;
+        }
+      
+        & h1 {
+          font-size: 55px;
+          color: var(--darker-grey);
+          line-height: 1.2em;
+          padding-bottom: 10px;
+          font-weight: var(--font-bolder);
+        }
+      
+        & p {
+          font-size: 16px;
+          padding-bottom: 10px;
+          color: var(--light-grey);
+        }
+
+        .couponWrapper {
+          display: flex;
+          align-content: left;
+          justify-content: flex-start;
+          
+    
+          p {
+            margin-right: 20px;
+            font-size: 16px;
+            color: var(--lighter-blue);
+          }
+        }      
+      }
+
+      .btnCreateNow {
+        border: 2px solid var(--light-blue);
+        background-color: var(--light-blue);
+        color: var(--lighter-bg);
+        padding: 10px 20px;
+        border-radius: 40px;
+        font-size: 15px;
   
+        &:hover {
+          background-color: var(--dark-blue);
+          border: 2px solid var(--dark-blue);
+          color: var(--lighter-bg);
+        }
+      }
+      
+      .lightText {
+        color: var(--light-text);
+      }
+      
+      .buttonContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+      
+        & p {
+          margin: 10px 0px;
+          margin-left: 15px;
+          padding: 5px 0;
+        }
+      }
+    }
 
-  & h1 {
-    font-size: 46px;
-    color: #ffff;
-    line-height: 1.2em;
-    padding-bottom: 10px;
-    font-weight: var(--font-bold);
-  }
+    .rightColumn {
+      width: 45%;
 
-  & p {
-    font-size: 14px;
-    padding-bottom: 10px;
-    color: var(--lighter-grey);
-  }
+      .imageColumns {
+        .image {
+          overflow: hidden;
+          transform: translatey(0px);
+          animation: float 6s ease-in-out infinite;
+        }
+      }
+    }
 
-}
-
-.lightText {
-  opacity: .7;
-}
-
-.buttonContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 20px;
-
-  & p {
-    margin: 10px 0px;
-    margin-left: 15px;
-    padding: 5px 0;
   }
 }
 
@@ -85,13 +143,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .bannerColumns {
-      & h1 {
-        font-size: 30px;
-        line-height: 1.3em;
-      }
-    }
-
     .wrapper {
       padding: 64px 20px 30px;
     }
@@ -99,6 +150,30 @@
     .container {
       width: 100%;
       flex-direction: column;
+
+      .inner {
+        display: block;
+  
+        .leftColumn {
+          width: 100%;
+
+          .bannerColumns {
+            & h1 {
+              font-size: 40px;
+              line-height: 1.3em;
+            }
+
+            .couponWrapper {
+              display: block;
+              p {
+                span {
+                  display: block;
+                }
+              }
+            }      
+          }
+        }
+      }
     }
     
     .bannerImage {
@@ -114,5 +189,18 @@
         margin: 0 0 20px 0;
       }
     }
+}
+
+/* <Floating> */
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
 

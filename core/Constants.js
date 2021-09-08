@@ -13,6 +13,8 @@ import FooterLogo from "../public/images/mintedpix-logo-gray.png";
 import OlympicLogo from "../public/images/olympic.png";
 import goldfish from "../public/images/42A705BC-4F18-4C7D-9DDA-8A2191D91A9C.png";
 import MTPXCoin from "../public/images/mintedpix-token-sample.png";
+
+/* <SAMPLE IMAGES> */
 import SamepleImage1 from '../public/images/12965CD0-9E85-4749-8A77-E923A096CD48.png';
 import SamepleImage2 from '../public/images/42A705BC-4F18-4C7D-9DDA-8A2191D91A9C.png';
 import SamepleImage3 from '../public/images/75D47A0C-C9D4-4B8B-951C-1AA834815902.png';
@@ -22,7 +24,7 @@ import SamepleImage6 from '../public/images/89343686_p0.jpeg';
 import SamepleImage7 from '../public/images/E6823FC2-1391-4031-AA11-6EDF86D5B7FC.png';
 import SamepleImage8 from '../public/images/4C9F1DFE-3D54-4D0E-8ACE-B0A0E1E3AF7E.png';
 
-
+/* <SAMPLE USERS> */
 import SamepleUser1 from '../public/images/photo-1555524554-0fdb51cd5020.jpeg';
 import SamepleUser2 from '../public/images/photo-1502823403499-6ccfcf4fb453.jpeg';
 import SamepleUser3 from '../public/images/photo-1517630800677-932d836ab680.jpeg';
@@ -31,10 +33,14 @@ import SamepleUser5 from '../public/images/photo-1535230464639-a413d00b9934.jpeg
 import SamepleUser6 from '../public/images/photo-1599834562135-b6fc90e642ca.jpeg';
 import SamepleUser7 from '../public/images/photo-1601412436009-d964bd02edbc.jpeg';
 
+/* <WALLET> */
 import formaticLogo from '../public/images/wallet/formatic-logo.jpeg';
 import coinbaseLogo from '../public/images/wallet/coinbase-mark.jpeg';
 import metamaskLogo from '../public/images/wallet/metamask-mark.png';
 import walletConnectLogo from '../public/images/wallet/wallet-connect-mark.jpeg';
+
+/* <CHALLENGES> */
+import SampleChallenge1 from '../public/images/challenges/overwatch-d-va-fan-art-anime-anime-e4e0a38ffabc8dc9ceb6d8a32863e254.png';
 
 export const imageAssets = {
   errorImage,
@@ -63,6 +69,7 @@ export const imageAssets = {
   SamepleUser5,
   SamepleUser6,
   SamepleUser7,
+  SampleChallenge1,
 };
 
 export const Colors = {
