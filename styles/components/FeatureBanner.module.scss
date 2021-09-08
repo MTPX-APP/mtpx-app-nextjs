@@ -79,6 +79,10 @@
   margin-right: 25px;
   width: 325px;
   transition: transform 250ms;
+  overflow: hidden;
+  transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+  position: relative;
 
   .artImage {
     border-radius: 24px;
@@ -86,6 +90,37 @@
 
   &:hover {
     transform: translateY(-5px);
+  }
+  .likeDoubleClick {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    user-select: none;
+    cursor: pointer;
+    z-index:9;
+  }
+
+  .fadeOut{
+    opacity:0;
+    width:0;
+    height:0;
+    transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+
+  }
+  .fadeIn{
+    opacity:1;
+    width:100px;
+    height:100px;
+    transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+
   }
 }
 
@@ -136,6 +171,10 @@
     color: var(--green);
     height: 33px;
     margin: 0 10px 0 0px;
+    
+    .value {
+      color: var(--light-blue) !important;
+    }
   }
 }
 .avatarContainer {
@@ -359,4 +398,17 @@
   .auctionDetails {
     display: none;
   }
+}
+
+/* <Floating> */
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "../styles/components/FeatureBanner.module.scss";
-import { imageAssets } from "../core/Constants";
+import { Colors, imageAssets } from "../core/Constants";
 import Link from "next/link";
 import Avatar from "./Avatar";
 import AuctionCard from "./AuctionCard";
 import CustomButton from "./CustomButton";
 import Modal from "../components/Modal";
 import Connect from "./Connect";
+import Helpers from '../core/Utils/Helpers';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRecordVinyl, faHeart, faEye, faMedal  } from "@fortawesome/free-solid-svg-icons";
 import ArtInfoView from "../components/ArtInfoView"   
@@ -16,11 +17,27 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
 const FeatureBanner = () => {
+  const [showLike, setShowLike]  = useState(false);
+  const [showFadeOut, setShowFadeOut]  = useState(false);
   const [showModal, setShowModal] = useState(false);
 
   const handleClick = () => {
     setShowModal(true);
   };
+
+  const dblClick = Helpers.useSingleAndDoubleClick(function() {
+    // Initial Click
+  }, function() {
+    setShowLike(true);
+    setTimeout(() => {
+      setShowFadeOut(true);
+      setTimeout(() => { 
+        setShowLike(false);
+        setShowFadeOut(false);
+      }, 1000);
+    }, 1000);
+  });
+
   return (
     <React.Fragment>
       <Modal show={showModal} onClose={() => setShowModal(false)}>
@@ -32,6 +49,16 @@ const FeatureBanner = () => {
           <div className={styles.imgBidContainer}>
             
             <div className={styles.imageContainer}>
+              <div className={styles.likeDoubleClick} onClick={dblClick}>
+              { showLike &&
+                <FontAwesomeIcon
+                    icon={faHeart}
+                    size="sm"
+                    className={`${styles.likeIcon} ${showFadeOut && styles.fadeOut}`}
+                    color={Colors.pink}
+                    />
+                }
+              </div>
               <Image
                 src={imageAssets.SamepleImage7}
                 width={320}
@@ -55,14 +82,9 @@ const FeatureBanner = () => {
                   </div>
                 </div>
                 <div className={`p-d-flex p-ai-center ${styles.pillContainer}`}>
-                  <FontAwesomeIcon
-                  icon={faRecordVinyl}
-                  pull="left"
-                  className={styles.instantPrice}            
-                  />
-                  <div>
-                    <p>Instant price</p>
-                    <p>3.5 ETH</p>
+                  <div className={styles.instantPrice}>
+                    <p>Buy now price</p>
+                    <p className={styles.value}>3.5 ETH</p>
                   </div>
                 </div>
               </div>
