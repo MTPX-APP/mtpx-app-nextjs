@@ -29,10 +29,8 @@ const DiscoverBanner = () => {
   };
 
   const dblClick = Helpers.useSingleAndDoubleClick(function() {
-    console.log('singleclick');
     // Initial Click
   }, function() {
-    console.log('doublecheck');
     setShowLike(true);
     setTimeout(() => {
       setShowFadeOut(true);
