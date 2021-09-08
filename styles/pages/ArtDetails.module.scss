@@ -3,6 +3,54 @@
   margin: 25px auto 50px;
   display: flex;
   justify-content: space-between;
+
+  &.collapseView {
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 0;
+    vertical-align: inherit;
+    max-width: 100%;
+    min-height: 0px;
+    min-width: 0px;
+    flex-shrink: 0;
+    flex-basis: auto;
+    display: flex;
+
+    & .expandViewImageContainer {
+      position: sticky;
+      margin-left: 0;
+      top: 25px;
+      vertical-align: inherit;
+      max-width: 100%;
+      min-height: 0;
+      min-width: 0;
+      -moz-box-orient: vertical;
+      -moz-box-direction: normal;
+      flex-direction: column;
+      display: -moz-box;
+      display: flex;
+      -moz-box-align: stretch;
+      align-items: stretch;
+      width: 650px;
+      
+    }
+
+    & .innerContainer {
+      flex: 1 1 auto;
+      max-width: 100%;
+      min-height: 0;
+      min-width: 0;
+      -moz-box-orient: vertical;
+      -moz-box-direction: normal;
+      flex-direction: column;
+      display: -moz-box;
+      display: flex;
+      -moz-box-align: stretch;
+      align-items: stretch;
+      width: 760px;
+      padding: 0;
+    }
+  }
   
   &.expandView {
     & .innerContainer {
@@ -78,6 +126,19 @@
   .container {
     display: block;
 
+    &.collapseView {
+      
+      & .expandViewImageContainer {
+        position: sticky;
+        width: 250px;      
+        margin-right: 30px;  
+      }
+  
+      & .innerContainer {
+        width: 160px;        
+      }
+    }
+
     & .btnExpandIcon {
       display: none;
     }
@@ -97,5 +158,25 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: block;
+
+    &.collapseView {
+      display: block;
+      & .expandViewImageContainer {
+        position: relative;
+        width: 100%;      
+        margin-right: 0;  
+        top: 0;
+      }
+  
+      & .innerContainer {
+        width: 100%;        
+      }
+    }    
   }
 }
