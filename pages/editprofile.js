@@ -11,6 +11,7 @@ import { InputTextarea } from "primereact/inputtextarea";
 import { InputText } from "primereact/inputtext";
 import { Dropdown } from "primereact/dropdown";
 import { BlockUI } from 'primereact/blockui';
+import SliderInput from "../components/SliderInput";
 import { Toast } from 'primereact/toast';
 import HeaderBreadCrumbs from "../components/HeaderBreadcrumbs";
 import styles from "../styles/pages/EditProfile.module.scss";
@@ -391,21 +392,16 @@ const EditProfile = () => {
               </div>
 
               <div className={styles.verifiedWrapper}>
-                <p className={styles.editTitle}>Verification</p>
                 <div className={styles.container}>
                   <div className={styles.content}>
-                    <p>
-                    MintedPix strive to provide the best creator by invitation and approval only. We have specific guidelines on the approval process based on your social media presence, creativity, portfolio, influence and other factors from our creative team that ranges from art professors, artists, influencers, and much more.
-                    </p>   
-                  </div>
-                  <div className={styles.btns}>
-                    <Link href="/apply" passHref>
-                      <Button 
-                        type="button"
-                        className={`p-button-rounded ${styles.btnApply}`}
-                        >Apply</Button>
-                    </Link>
-                  </div>
+                    {/*Put on Sale */}
+                    <SliderInput
+                      title="Verify as a creator"
+                      name="verify"
+                      label="Check here if you want MintdPix team to review you as a creator. All artwork must be originally created by you to apply for this."
+                      styles={styles}
+                    />
+                  </div>                  
                 </div>
               </div>
               <div className={`${styles.buttondiv}`}>
