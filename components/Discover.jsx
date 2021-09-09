@@ -6,9 +6,8 @@ import CustomSelect from "./CustomSelect";
 import Label from "./Label";
 import Filter from "./Filter";
 import { useState } from "react";
-import InputField from "./InputField";
 import ArtInfoView from "./ArtInfoView";
-import { Divider } from "primereact/divider";
+import MintedPixLoader from "./MintedLoader";
 
 const Discover = () => {
   const [value, setValue] = useState();
@@ -114,6 +113,7 @@ const Discover = () => {
           likes={405}
         />
       </div>
+      <div className={styles.loader}><MintedPixLoader /></div>
     </div>
   );
 };
