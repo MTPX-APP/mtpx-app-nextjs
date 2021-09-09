@@ -7,8 +7,8 @@
 
   .verifiedWrapper {
     margin: 20px 0 30px;
-
-    padding: 30px 25px;
+    
+    padding: 20px;
     border: var(--light-border);
     border-radius: 16px;
 
@@ -28,15 +28,51 @@
       & .content {
         font-size: 14px;
         color: var(--light-grey);
-      }
-  
-      & .btns {
-        width: 200px;
-        text-align: right;;
+        width: 100%;
+
+        h3 {
+          margin: 0 0 10px;
+        }
+
+        .sliderdiv {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          align-content: center;
+          padding: 10px ;
+          margin-top: 0;
+
+          & > div {
+            &:first-child {
+            width: 90%;
+            }
+            &:last-child {
+              padding: 0 20px;
+              }
+          }
+
+          .info {
+            width: 90%;        
+          }
+
+          small {
+            font-size: 14px;
+            color: var(--dark-text);
+          }
+        }
+
+        .sliderlabel {
+          color: rgba(0, 0, 0, 0.5);
+          font-size: 13px;
+          
+        }
+
       }
     }
   }
 }
+
+
 
 .title {
   h2 {

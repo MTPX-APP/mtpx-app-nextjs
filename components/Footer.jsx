@@ -84,9 +84,9 @@ function Footer() {
             <div className={styles.footerColumns}>
               <h6>Community</h6>
               <ul>
-                <li>
+                {/* <li>
                   <Link href="/apply">Apply as an creator</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/">Join our Discord</Link>
                 </li>

@@ -79,9 +79,9 @@ function NavbarLinks({ handleMenu }) {
         <Link href="/faq" passHref scroll={true}>
           <a onClick={() => handleMenu()}>How it works</a>
         </Link>
-        <Link href="/apply" passHref scroll={true}>
+        {/* <Link href="/apply" passHref scroll={true}>
           <a onClick={() => handleMenu()}>Apply as a creator</a>
-        </Link>
+        </Link> */}
       </div>
 
       <div className={styles.navField}>
