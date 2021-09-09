@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Colors } from "../core/Constants";
 import styles from "../styles/components/ProfilecardPopUp.module.scss";
 
-const ProfilecardPopUp = ({setProfilePopup}) => {
+const ProfilecardPopUp = ({setProfilePopup, handleFeedback}) => {
   return (
     <div className={styles.Profilecard}>
       <div className={styles.topContainer}>
@@ -40,7 +40,7 @@ const ProfilecardPopUp = ({setProfilePopup}) => {
           <Link href={"/activity"} passHref>
             <li  onClick={() => setProfilePopup(false)}>My Activity</li>
           </Link>
-          <li>Feedback</li>
+          <li onClick={handleFeedback}>Feedback</li>
           <li>Disconnect</li>
         </ul>
       </div>

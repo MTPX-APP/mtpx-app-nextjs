@@ -9,6 +9,8 @@ import { Button } from "primereact/button";
 import Notification from "./Notification";
 import ProfilecardPopUp from "./ProfilecardPopUp";
 import Avatar from "./Avatar";
+import Feedback from "./Feedback";
+import Modal from "./Modal";
 import styles from "../styles/components/Header.module.scss";
 import OutsideClickHandler from "react-outside-click-handler";
 import { imageAssets } from "../core/Constants";
@@ -19,6 +21,7 @@ function Header() {
   const [searchValue, setSearchValue] = useState('')
   const [show, setShow] = useState(false);
   const [showNotification, setNotification] = useState(false);
+  
   const router = useRouter();
   const { t } = useTranslation('header');
 
@@ -26,6 +29,8 @@ function Header() {
     const query = e.target.value;
     router.push(`search`);
   }
+
+  
 
   return (
     <div className={`${styles.navbar} ${router.pathname === '/' ? styles.navBarHome : ''}`}>
@@ -104,6 +109,12 @@ function Header() {
 
 const NavBarItem = () => {
   const [showProfilePopup, setProfilePopup] = useState(false);
+  const [visibleModalFeedback, setVisibleModalFeedback] = useState(false);
+  const handleFeedback = () => {
+    setVisibleModalFeedback(true);
+    setProfilePopup(false);
+  }
+
   return (
     <>
        <OutsideClickHandler onOutsideClick={() => setProfilePopup(false)}>
@@ -127,9 +138,17 @@ const NavBarItem = () => {
         </Button>
         
       </div>
-      {showProfilePopup && <ProfilecardPopUp setProfilePopup={setProfilePopup} />}
+      {showProfilePopup && <ProfilecardPopUp setProfilePopup={setProfilePopup} handleFeedback={handleFeedback} />}
       </OutsideClickHandler>
+
+      <Modal
+        show={visibleModalFeedback}
+        onClose={() => setVisibleModalFeedback(false)}
+      >
+        <Feedback />
+      </Modal>
     </>
+   
   );
 };
 
