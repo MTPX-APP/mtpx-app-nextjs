@@ -47,6 +47,7 @@ const DiscoverBanner = () => {
         <Connect onClose={() => setShowModal(false)} />
       </Modal>
       <div className={styles.wrapper}>
+        <div className={styles.wrapperCurved}></div>
         <div className={styles.container}>
           <div className={styles.content}>
             <h1>{t('heroTitle')}</h1>
