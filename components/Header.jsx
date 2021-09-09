@@ -43,9 +43,9 @@ function Header() {
             <li>{t('creators')}</li>
           </Link>
           <li onClick={() => setShow(true)}>{t('howItWorks')}</li>          
-          <Link href="/apply" passHref>
+          {/* <Link href="/apply" passHref>
             <li>{t('applyAsAnCreator')}</li>
-          </Link>
+          </Link> */}
         </ul>
       </nav>
       <div>

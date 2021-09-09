@@ -390,15 +390,15 @@ const EditProfile = () => {
                 )} />
                 {getFormErrorMessage('instagramUrl')}
               </div>
-
+              <h3>Verification</h3>
               <div className={styles.verifiedWrapper}>
                 <div className={styles.container}>
                   <div className={styles.content}>
                     {/*Put on Sale */}
                     <SliderInput
-                      title="Verify as a creator"
+                      title="Become a verified creator"
                       name="verify"
-                      label="Check here if you want MintdPix team to review you as a creator. All artwork must be originally created by you to apply for this."
+                      label="Check here if you want MintdPix team to review you as a creator. Your social URL, website, bio, and location must be entered in order for us to consider you as a verified artist. This process can take up to 2 weeks. "
                       styles={styles}
                     />
                   </div>                  
