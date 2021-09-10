@@ -454,8 +454,7 @@ const Multiple = () => {
                 }} 
                 render={({ field, fieldState }) => (
                   <InputText 
-                    id={field.name} {...field} 
-                    autoFocus
+                    id={field.name} {...field}
                     aria-describedby="quantity"
                     maxLength={5}
                     placeholder="Enter your quantity"
