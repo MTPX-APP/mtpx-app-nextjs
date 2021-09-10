@@ -33,7 +33,7 @@
     }
   }
 
-  .headerBtn {
+  .likeBtn {
     border: var(--light-border);
     border-radius: 90px;
     padding: 10px 20px;
@@ -56,11 +56,6 @@
       }
     }
 
-    &:hover,
-    &:active {
-      color: var(--black) !important;
-    }
-
     span {
       color: var(--dark-grey);
       font-size: 14px;
@@ -69,6 +64,14 @@
     .likeIcon {
       margin-right: 10px;
       font-size: 16px;
+      color: var(--light-grey);
+    }
+
+    &:hover,
+    &:active {
+      .likeIcon {
+        color: var(--pink);
+      }
     }
 
     .viewIcon {

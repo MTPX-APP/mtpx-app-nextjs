@@ -25,7 +25,7 @@ function ArtDetailsHeader({
             </a>
             </Link>
             <div className={styles.editControls}>
-                <a className={styles.headerBtn}>
+                <a className={styles.likeBtn}>
                     <FontAwesomeIcon
                     icon={faHeart}
                     className={styles.likeIcon}

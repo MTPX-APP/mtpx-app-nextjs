@@ -39,12 +39,18 @@ const ArtDetailsContent = ({parentStyles}) => {
         <ArtPurchase />
         <div className={styles.content}>
           <h4 className={styles.contentHeader}>DESCRIPTION</h4>
-          <p>
+          <p className={styles.details}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Consequuntur, inventore.
           </p>
 
           <div className={styles.propertyWrapper}>
+            <div className={styles.column}>
+              <h4 className={styles.contentHeader}>QTY</h4>
+              <p>
+                2 of 10
+              </p>
+            </div>
             <div className={styles.column}>
               <h4 className={styles.contentHeader}>SIZE</h4>
               <p>
