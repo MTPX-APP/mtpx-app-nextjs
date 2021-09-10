@@ -1,14 +1,26 @@
 import { Button } from "primereact/button";
+import Avatar from "./Avatar";
 import Link from "next/link";
-import { Colors } from "../core/Constants";
+import { imageAssets } from "../core/Constants";
 import styles from "../styles/components/ProfilecardPopUp.module.scss";
 
 const ProfilecardPopUp = ({setProfilePopup, handleFeedback}) => {
   return (
     <div className={styles.Profilecard}>
+      <div className={styles.avatar}>
+        <Avatar
+          width={60}
+          height={60}
+          src={imageAssets.SamepleUser2}
+          alt={"avatar"}
+        />
+      </div>
       <div className={styles.topContainer}>
         <h2>@EnricoCole</h2>
-        <p>uhuaefjbwoo3347</p>
+
+        <div className={styles.address}>
+          0x41f8730e0b32b04beaa5757e5aea3aef970e5b613
+        </div>
         
         <div className={styles.social}>
           <div>{`20`} <span>Following</span></div>
