@@ -598,3 +598,15 @@ small {
 /*
   </Override PrimeReact Components>
 */
+
+
+/*
+  </Override INPUT fields for IOS autofocus bug>
+*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px !important;
+  }
+}
