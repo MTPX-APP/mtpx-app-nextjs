@@ -11,12 +11,13 @@
 
   span {
     color: var(--dark-grey);
-    font-weight: var(--font-bold);
+    font-weight: var(--font-semi-bold);
+    font-size: 14px;
   }
 
   & .miscIcon {
     font-size: 18px;
-    color: var(--light-text);
+    color: var(--light-grey);
     margin-right: 10px;
 
   }
