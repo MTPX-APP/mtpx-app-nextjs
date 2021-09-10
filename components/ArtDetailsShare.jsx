@@ -66,7 +66,7 @@ const ArtDetailsShare = ({ className, shareUrl }) => {
               <div className={styles.item} onClick={handleCopy}>
                   <i className={`pi pi-copy ${styles.copy}`}></i>
                   <span>Copy</span>
-                </div>
+              </div>
           </div>
         </div>
       </OutsideClickHandler>     

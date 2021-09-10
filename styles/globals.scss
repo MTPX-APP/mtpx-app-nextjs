@@ -533,6 +533,7 @@ small {
     border-radius: 8px;
 
     & .p-toast-message-content {
+      text-align: left;
       & .p-toast-message-icon {
         display: none;
       }
@@ -552,7 +553,7 @@ small {
       background: var(--light-bg);
       border-width: 0 0 0 0;
       border: solid 2px var(--lighter-grey);
-      color: var(--dark-grey);
+      color: var(--dark-grey);      
 
       .p-toast-icon-close,
       .p-toast-message-icon {
