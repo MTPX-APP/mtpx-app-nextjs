@@ -1,5 +1,5 @@
 .contentContainer {
-  padding: 0 0 0 40px;
+  padding: 0 0 0 30px;
 }
 
 .container {
@@ -157,16 +157,26 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .contentContainer {
+    padding: 0 0 0 10px;
+  }
+}
+
 @media screen and (max-width: 1025px) {
   .container {
     width: 100%;
     padding: 0;
   }
+
+  .contentContainer {
+    padding: 0 0 0 10px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .contentContainer {
-    padding: 0 0 0 0;
+    padding: 0;
 
     .propertyWrapper {
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
