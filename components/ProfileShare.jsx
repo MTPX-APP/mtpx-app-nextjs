@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { useRouter } from 'next/router'
+import { Toast } from 'primereact/toast';
 import cn from "classnames";
 import OutsideClickHandler from "react-outside-click-handler";
 import Icon from "./Icon.js";
@@ -13,10 +15,19 @@ import styles from "../styles/components/ProfileShare.module.scss";
 config.autoAddCss = false
 
 const ProfileShare = ({ className, shareUrl }) => {
+  const pageToast = useRef(null);
   const [visible, setVisible] = useState(false);
+  const { asPath } = useRouter();
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(`${process.env.VERCEL_URL}${asPath}`)
+    pageToast.current.show({severity: 'success', summary: 'Copied successfully', detail: 'You can now paste this URL'}); 
+    setVisible(false);
+  }
   
   return (
     <>
+    <Toast ref={pageToast} /> 
       <OutsideClickHandler onOutsideClick={() => setVisible(false)}>
         <div
           className={cn(styles.actions, className, {
@@ -46,10 +57,15 @@ const ProfileShare = ({ className, shareUrl }) => {
 
               <EmailShareButton url={shareUrl}>
                 <div className={styles.item} onClick={() => setVisible(false)}>
-                  <Icon name={`copy`} size="20" />
+                  <i className={`pi pi-envelope ${styles.email}`}></i>
                   <span>Email</span>
                 </div>
               </EmailShareButton>
+
+              <div className={styles.item} onClick={handleCopy}>
+                  <i className={`pi pi-copy ${styles.copy}`}></i>
+                  <span>Copy</span>
+              </div>
           </div>
         </div>
       </OutsideClickHandler>     
