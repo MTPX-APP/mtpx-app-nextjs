@@ -1,72 +1,80 @@
 .loaderWrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  .info {
     position: relative;
-    display: flex;
-    justify-content: space-between;
+    left: 50px;
+    top: 5px;
+    font-size: 13px;
+    color: var(--light-grey);
+  }
 
-    .info {
-        position: relative;
-        left: 50px;
-        top: 5px;
-        font-size: 13px;
-        color: var(--light-grey);
+  .loader {
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+
+    .load,
+    .load:after {
+      border-radius: 50%;
+      background-color: black;
+      width: 20px;
+      height: 20px;
     }
 
-    .loader {
-        position: absolute;
-        margin: 0 auto;
-        bottom: 0;
-        
-        .load,
-        .load:after {
-        border-radius: 50%;
-        background-color: black;
-        width: 20px;
-        height: 20px;
-        }
-    
-        .load {
-            background: transparent url('../../public/mintedpix-icon.png') center center no-repeat;
-            background-size: contain;
-            animation: MoveLoader 1s linear infinite;
-            position: absolute;
-            left: 0;
-            bottom: -3px;
-            z-index:1;
-        }
-    
-        .line {
-            background: rgb(255,255,255);
-            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(142,142,142,1) 100%);
-            width: 30px;
-            height: 3px;
-            margin: 0 auto;
-            border-radius: 6px;
-            position: relative;
-            top: 3px;
-            animation: MoveLine 1s linear infinite;
-        }
+    .load {
+      background: transparent
+        url("../../public/images/brand/minted-mark-500.png") center center
+        no-repeat;
+      background-size: contain;
+      animation: MoveLoader 1s linear infinite;
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      z-index: 1;
     }
+
+    .line {
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(142, 142, 142, 1) 100%
+      );
+      width: 30px;
+      height: 3px;
+      margin: 0 auto;
+      border-radius: 6px;
+      position: relative;
+      top: 3px;
+      animation: MoveLine 1s linear infinite;
+    }
+  }
 }
 
 @keyframes MoveLoader {
-
-    0%, 100% {
-        left: 0;
-        transform: rotate(0deg);
-      }
-      50% {
-        left: 26px;
-        transform: rotate(20deg);
-      }
+  0%,
+  100% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    left: 26px;
+    transform: rotate(20deg);
+  }
 }
 
 @keyframes MoveLine {
-    0%, 100% {
-        left: 0;
-        width: 10px;
-    }
-    50% {
-        left: 15px;
-        width: 25px;
-    }
+  0%,
+  100% {
+    left: 0;
+    width: 10px;
+  }
+  50% {
+    left: 15px;
+    width: 25px;
+  }
 }
