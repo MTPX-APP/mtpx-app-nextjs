@@ -14,6 +14,9 @@ import OlympicLogo from "../public/images/olympic.png";
 import goldfish from "../public/images/42A705BC-4F18-4C7D-9DDA-8A2191D91A9C.png";
 import MTPXCoin from "../public/images/mintedpix-token-sample.png";
 
+/* <Brand> */
+import LogoMark from '../public/images/brand/minted-mark-500.png';
+
 /* <SAMPLE IMAGES> */
 import SamepleImage1 from '../public/images/12965CD0-9E85-4749-8A77-E923A096CD48.png';
 import SamepleImage2 from '../public/images/42A705BC-4F18-4C7D-9DDA-8A2191D91A9C.png';
@@ -54,6 +57,7 @@ export const imageAssets = {
   profilepic,
   goldfish,
   MTPXCoin,
+  LogoMark,
   SamepleImage1,
   SamepleImage2,
   SamepleImage3,

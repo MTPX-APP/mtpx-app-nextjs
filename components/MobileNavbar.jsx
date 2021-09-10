@@ -28,7 +28,7 @@ const MobileNavbar = () => {
   return (
     <div className={styles.wrapper}>
       <div className={` p-d-flex p-jc-between p-ai-center ${styles.container}`}>
-        <Link href="/" passHref><a className={styles.mobileLogoWrapper} ><Image src={imageAssets.MobileLogo} alt="logo" width={41} height={39} /></a></Link>
+        <Link href="/" passHref><a className={styles.mobileLogoWrapper} ><Image src={imageAssets.LogoMark} alt="logo" width={41} height={39} /></a></Link>
         <div className={`p-d-flex p-jc-between p-ai-center ${styles.navItem}`}>
           <OutsideClickHandler onOutsideClick={() => setNotification(false)}>
             <div onClick={() => setNotification(!showNotification)} className={`${styles.bellIcon} ${showNotification && styles.active }`}>

@@ -1,5 +1,5 @@
-import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import MintedPixLoader from "../components/MintedLoader";
 
 import {
   PopularSellers,
@@ -22,12 +22,14 @@ const Creators = () => {
           <Followers Users={Users} />
         </div>
       </div>
-      <div className={styles.loadmoreContainer}>
+      {/* <div className={styles.loadmoreContainer}>
         <div className={styles.loadmore}>
           <p>Load more</p>
           <i className="pi pi-spin pi-spinner" style={{'fontSize': '1em'}}></i>
         </div>
-      </div>
+      </div> */}
+
+      <div className={styles.loader}><MintedPixLoader /></div>
       <Banner />
       
     </main>
