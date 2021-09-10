@@ -108,6 +108,7 @@
   }
 
   .propertyWrapper {
+    margin-top: 20px;
     display: grid;
     list-style: none;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -116,7 +117,7 @@
     .column {
       padding: 10px 25px 15px;
       border: var(--light-border);
-      margin: 30px 0px 12px;
+      margin: 0;
       border-radius: 16px;
       font-weight: var(--font-bolder);
       color: var(--light-grey);
@@ -173,12 +174,21 @@
       .column {
         padding: 10px 25px 15px;
         border: var(--light-border);
-        margin: 20px 0px;
+        margin: 0;
         border-radius: 16px;
       }
     }
-  }
+  } 
+}
 
-  
-  
+@media screen and (max-width: 320px) {
+  .contentContainer {
+    .propertyWrapper {
+      grid-template-columns: repeat(auto-fill, minmax(299px, 1fr));
+      
+      .column {
+        width: 100%;
+      }
+    }
+  } 
 }
