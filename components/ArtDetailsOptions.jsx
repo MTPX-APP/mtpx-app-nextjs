@@ -48,7 +48,7 @@ const ArtDetailsOptions = ({ className }) => {
     },
     {
       title: "Burn token",
-      icon: "close-circle",
+      icon: "lightning",
       action: () => { 
         setVisible(false);
         setVisibleModalBurn(true)
