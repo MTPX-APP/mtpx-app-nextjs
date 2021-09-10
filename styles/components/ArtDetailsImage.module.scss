@@ -61,12 +61,16 @@
       align-items: center;
       font-size: 100px;
       user-select: none;
+      color: var(--white);
+      transform-origin: 50% 100%;
   
-  
-      // svg {
-      //   -webkit-filter: drop-shadow(1px 0px 15px rgba(0, 0, 0, 0.7));
-      //   filter: drop-shadow(1px 0px 15px rgba(0, 0, 0, 0.7));
-      // }
+      svg {
+        -webkit-filter: drop-shadow(1px 0px 15px rgba(0, 0, 0, 0.7));
+        filter: drop-shadow(1px 0px 15px rgba(0, 0, 0, 0.7));    
+        animation-duration: .2s;
+        animation-name: fadeAndScale;
+        animation-timing-function: cubic-bezier(.71,.55,.62,1.57);    
+      }
     }
   }
   
@@ -74,8 +78,7 @@
     opacity:0;
     width:0;
     height:0;
-    transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
-  
+    transition: width 0.2s 0.2s, height 0.2s 0.2s, opacity 0.5s;
   }
   .fadeIn{
     opacity:1;
@@ -192,6 +195,17 @@
   }
   .fullscreenImage {
     max-width: 60vh;
+  }
+}
+
+@keyframes fadeAndScale {
+  from {
+      opacity: 0;
+      transform: scale(.9, .9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1, 1);
   }
 }
 

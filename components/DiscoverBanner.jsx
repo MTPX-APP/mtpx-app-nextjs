@@ -74,7 +74,6 @@ const DiscoverBanner = () => {
                     icon={faHeart}
                     size="sm"
                     className={`${styles.likeIcon} ${showFadeOut && styles.fadeOut}`}
-                    color={Colors.pink}
                     />
                 }
               </div>
