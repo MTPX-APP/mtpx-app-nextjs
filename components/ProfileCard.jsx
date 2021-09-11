@@ -11,7 +11,7 @@ import Modal from "./Modal";
 import { Toast } from 'primereact/toast';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapMarkerAlt, faGlobe, faCamera } from "@fortawesome/free-solid-svg-icons";
+import { faMapMarkerAlt, faGlobe, faCamera, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faDribbble, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -53,7 +53,16 @@ const ProfileCard = () => {
           />          
         </div>
         <div className={styles.divgrp}>
-          <h1>EnricoCole</h1>
+          <div className={styles.userName}>
+            <h1>
+              EnricoCole
+            </h1>
+            <div className={styles.badge}> <FontAwesomeIcon
+              icon={faCheck}
+              className={styles.verifiedIcon}            
+            /></div>
+          </div>
+          
           <div className={styles.profileAddress} onClick={handleCopyAddress}>
             <span className={styles.address}>{address}</span>
             <span className={styles.info}>Copy Address</span>

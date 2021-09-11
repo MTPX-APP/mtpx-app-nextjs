@@ -25,6 +25,7 @@
     animation: float 6s ease-in-out infinite;
     position: relative;
     cursor: pointer;
+    
     img {
       border: solid 2px #fff !important;
       background-position: 50% 50%;
@@ -243,11 +244,36 @@
     }
   }
 
-  h1 {
-    font-size: 17px;
-    font-weight: var(--font-bolder);
-    margin-bottom: 20px;
-    display: block;
+  .userName {
+    display: flex;
+    justify-content: center;
+
+    h1 {
+      font-size: 17px;
+      font-weight: var(--font-bolder);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .badge {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: var(--lighter-blue);
+      font-size: 13px;
+      margin-left: 4px;
+      
+      svg {
+        color: var(--white) !important;        
+        position: relative;
+        width: 8px;
+        height: 8px;
+        
+      }
+    }
   }
 
   h4 {
