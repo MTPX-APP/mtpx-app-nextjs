@@ -13,18 +13,18 @@
     }
 
     .countDown {
-      background-color: var(--lighter-grey);
+      
       align-items: center;
       display: flex;
       padding: 0 20px;
-      border-radius: 10px;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: var(--font-bolder);
       color: var(--dark-grey);
     
 
       .clockIcon {
         margin-right: 10px;
+        font-size: 20px;
       }
     }
   }
@@ -61,6 +61,7 @@
 
 .btnContainer {
   margin: 20px 0;
+  display: flex;
   & > div {
     width: 100%;
 
@@ -72,6 +73,7 @@
       width: 100%;
       font-size: 16px;
       padding: 12px 15px;
+      font-weight: var(--font-semi-bold);
     }
   }
 }
@@ -106,18 +108,17 @@
       justify-content: space-between;
 
       .countDown {
-        border-radius: 16px;
         margin-left: 20px;
         
         .clockIcon {
-          display: none;
+          display: block;
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .container {
     margin: 0;
     .topSection {
@@ -126,6 +127,7 @@
 
       .countDown {
         display: flex;
+        background-color: var(--lighter-grey);
         border-radius: 50px;
         padding: 15px 0;
         margin: 20px 0 0;
@@ -135,15 +137,22 @@
         justify-content: center;
 
         .clockIcon {
-          display: none;
+          display: block;
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 818px) {
-  
+@media screen and (max-width: 768px) {
+  .btnContainer {
+    margin-top: 0;
+    display: block;
+
+    button {
+      width: 100%;      
+    }
+  }
 }
 
 

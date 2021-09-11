@@ -50,6 +50,7 @@ const ArtPurchase = () => {
               height={48}
               src={imageAssets.SamepleUser2}
               alt="ProfilePic"
+              isVerified={true}
             />
             <div className={styles.bidDetails}>
               <p>
@@ -69,7 +70,7 @@ const ArtPurchase = () => {
             3h 12m 20s left
           </div>
         </div>
-        <div className={`p-d-flex ${styles.btnContainer}`}>
+        <div className={`${styles.btnContainer}`}>
           <div>
             <CustomButton
               text="Buy for 2.563 ETH"
