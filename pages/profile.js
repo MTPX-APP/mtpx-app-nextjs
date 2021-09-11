@@ -10,6 +10,13 @@ import ArtInfoView from "../components/ArtInfoView";
 import Followers from "../components/Followers";
 import { Button } from "primereact/button";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCamera } from "@fortawesome/free-solid-svg-icons";
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+
+config.autoAddCss = false
+
 const Profile = () => {
   const [show, setShow] = useState({
     sales: true,
@@ -99,15 +106,12 @@ const Profile = () => {
     <>
       <div className={styles.imgContainer} style={{ backgroundImage: `url( ${imageAssets.goldfish.src})` }}>
         <div className={styles.ButtonContainer}>
-          <Button
-            label="Edit cover photo"
-            className={`p-button-outlined p-button-secondary p-button-rounded ${styles.Button}`}
-          />
-          <Button
-            label="Edit profile"
-            className={`p-button-outlined p-button-secondary p-button-rounded ${styles.Button}`}
-            onClick={handleRoute}
-          />
+          <div className={styles.btnCamera}>
+          <FontAwesomeIcon
+          icon={faCamera}
+          className={`${styles.cameraIcon}`}          
+          />        
+          </div>
         </div>
       </div>
       <div className={styles.container}>

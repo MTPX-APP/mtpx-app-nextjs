@@ -1,5 +1,5 @@
 .card {
-  width: 270px;
+  width: 280px;
   margin: auto;
   padding: 10px 20px 10px 20px;
   border-radius: 0;
@@ -15,29 +15,51 @@
   }
 
   & .cardAvatar {
+    width: 135px;
+    height: 135px;
     
-    width: 130px;
-    height: 130px;
-    background-position: 50% 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 130px;
     margin: 0 auto 20px auto;
-    background-color: var(--light-bg);
+    background-color: transparent;
     overflow: hidden;
     transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
+    position: relative;
+    cursor: pointer;
     img {
       border: solid 2px #fff !important;
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 130px;
+      width: 130px;
+      height: 130px;
     }
- 
-  }
 
+    .camera {
+      display: none;
+    }
+
+    &:hover {
+      .camera {
+        width: 130px;
+        height: 130px;
+        border-radius: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,.2);
+        position: absolute;
+        z-index:1;
+        color: var(--white);
+        font-size: 34px;
+      }
+    }
+  }
 
   & .social {
     margin: 10px 0 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-size: 18px;
     color: var(--dark-grey);
     font-weight: var(--font-semi-bold);
@@ -177,8 +199,8 @@
   margin: 1rem auto;
 
   .profileAddress {
-    font-weight: var(--font-bolder);
-    padding: 10px 10px;
+    font-weight: var(--font-semi-bold);
+    padding: 10px 10px 10px 20px;
     background-color: var(--light-bg);
     border-radius: 30px;
     font-size: 13px;
@@ -186,10 +208,6 @@
     justify-content: center;
     margin-top: 10px;
     cursor: pointer;
-    i {
-      color: var(--light-grey);
-      margin-right: 5px;
-    }
 
     .address {
       flex: 1;
@@ -226,10 +244,10 @@
   }
 
   h1 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: var(--font-semi-bold);
-    margin-bottom: 5px;
+    font-size: 17px;
+    font-weight: var(--font-bolder);
+    margin-bottom: 20px;
+    display: block;
   }
 
   h4 {

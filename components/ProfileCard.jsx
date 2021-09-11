@@ -11,7 +11,7 @@ import Modal from "./Modal";
 import { Toast } from 'primereact/toast';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapMarkerAlt, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faMapMarkerAlt, faGlobe, faCamera } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faDribbble, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -38,6 +38,12 @@ const ProfileCard = () => {
     <Toast ref={pageToast} /> 
       <Card className={styles.card}>
         <div className={styles.cardAvatar}>
+          <div className={styles.camera}>
+            <FontAwesomeIcon
+              icon={faCamera}
+              className={`${styles.cameraIcon}`}
+              />
+          </div>
           <Avatar
             width={130}
             height={130}
@@ -47,9 +53,8 @@ const ProfileCard = () => {
           />          
         </div>
         <div className={styles.divgrp}>
-          <h1>Enrico Cole</h1>
+          <h1>EnricoCole</h1>
           <div className={styles.profileAddress} onClick={handleCopyAddress}>
-            <i className={`pi pi-copy`}></i>
             <span className={styles.address}>{address}</span>
             <span className={styles.info}>Copy Address</span>
           </div>
@@ -91,7 +96,7 @@ const ProfileCard = () => {
           <p>United States</p>
         </div>
         <div className={styles.icongrp}>
-          <Link href="//twitter">
+          <Link href="http://twitter.com">
               <a>
             <FontAwesomeIcon
                 icon={faGlobe}
@@ -100,7 +105,7 @@ const ProfileCard = () => {
                 />
               </a>  
             </Link>
-            <Link href="//twitter">
+            <Link href="http://twitter.com">
               <a>
             <FontAwesomeIcon
                 icon={faTwitter}
@@ -109,25 +114,25 @@ const ProfileCard = () => {
                 />
               </a>  
             </Link>
-            <Link href="//instagram">
+            <Link href="http://instagram.com">
             <a>
-            <FontAwesomeIcon
+              <FontAwesomeIcon
                 icon={faInstagram}
                 className={`${styles.socialIcons} ${styles.iconInstagram}`}
                 color={Colors.blue}
                 />
               </a>
               </Link>
-              <Link href="//facebook">
-          <a>
-            <FontAwesomeIcon
+              <Link href="https://www.facebook.com">
+            <a>
+              <FontAwesomeIcon
                 icon={faFacebook}
                 className={`${styles.socialIcons} ${styles.iconFacebook}`}
                 color={Colors.blue}
                 />
             </a>
             </Link>
-            <Link href="//dribbble">
+            <Link href="http://www.dribbble.com">
             <a>
             <FontAwesomeIcon
                 icon={faDribbble}
