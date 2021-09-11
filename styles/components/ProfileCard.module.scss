@@ -1,5 +1,5 @@
 .card {
-  width: 256px;
+  width: 270px;
   margin: auto;
   padding: 10px 20px 10px 20px;
   border-radius: 0;
@@ -15,6 +15,7 @@
   }
 
   & .cardAvatar {
+    
     width: 130px;
     height: 130px;
     background-position: 50% 50%;
@@ -26,11 +27,12 @@
     overflow: hidden;
     transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
-
-      img {
-        border: solid 2px #fff !important;
-      }
+    img {
+      border: solid 2px #fff !important;
+    }
+ 
   }
+
 
   & .social {
     margin: 10px 0 0;
@@ -67,7 +69,7 @@
 
 .btngrp {
   padding: 0 10px;
-  margin: 3rem 0;
+  margin: 2rem 0;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -154,13 +156,20 @@
   }
 }
 
-.info {
+.bio {
   margin: 1rem auto;
   font-size: 13px;
   p {
     color: var(--light-text);
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.5em;
+    text-align: center;
   }
+}
+
+.divider {
+  font-size: 13px;
+  font-weight: var(--font-semi-bold);
 }
 
 
@@ -259,10 +268,9 @@
 
   .btngrp {
     padding: 0 10px;
-    margin: 1rem 0;
+    margin: 10px auto;
     display: flex;
     width: 40%;
-    margin: 2rem auto;
 
     & .btnFollow {
       background-color: var(--light-blue);
@@ -367,4 +375,14 @@
 	100% {
 		transform: translatey(0px);
 	}
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1.0);
+  }
+  
+  to {
+    transform: scale(1.2);
+  }
 }

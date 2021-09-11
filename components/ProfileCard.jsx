@@ -1,6 +1,7 @@
 import React, {useState, useRef}from "react";
 import Avatar from "./Avatar";
 import { Button } from "primereact/button";
+import { Divider } from 'primereact/divider';
 import { Card } from "primereact/card";
 import Link from "next/link";
 import { Colors, imageAssets } from "../core/Constants";
@@ -42,7 +43,8 @@ const ProfileCard = () => {
             height={130}
             src={imageAssets.SamepleUser2}
             alt={"avatar"}
-          />
+            parentStyle={styles.avatar}
+          />          
         </div>
         <div className={styles.divgrp}>
           <h1>Enrico Cole</h1>
@@ -55,21 +57,6 @@ const ProfileCard = () => {
         <div className={styles.social}>
           <div>{`20`} <span>Following</span></div>
           <div>{`1000`} <span>Followers</span></div>
-        </div>
-        <div className={styles.info}>
-          <p>
-            A wholesome farm owner in Montana. Upcoming gallery solo show in
-            Germany.
-          </p>
-        </div>
-        <div className={styles.contentGroup}>
-          <span>
-          <FontAwesomeIcon
-                icon={faMapMarkerAlt}
-                className={`${styles.iconMap}`}                
-                />
-          </span>
-          <p>United States</p>
         </div>
         <div className={styles.btngrp}>
           <Button label="Follow" className={`p-button-rounded ${styles.btnFollow}`} />
@@ -85,6 +72,23 @@ const ProfileCard = () => {
           >
             <ProfileReport />
           </Modal>
+        </div>
+        <Divider align="center" type="solid" className={styles.divider}>
+            Bio
+        </Divider>
+        <div className={styles.bio}>
+          <p>
+          Based in LA, exhibited internationally with work in the collections of SFMoMA, Hirshhorn Museum, MoCA, Miami, Smithsonian Museum of American Art in DC. Rep'd by Salon 94, NYC and Ratio 3, SF.
+          </p>
+        </div>
+        <div className={styles.contentGroup}>
+          <span>
+          <FontAwesomeIcon
+                icon={faMapMarkerAlt}
+                className={`${styles.iconMap}`}                
+                />
+          </span>
+          <p>United States</p>
         </div>
         <div className={styles.icongrp}>
           <Link href="//twitter">
