@@ -14,7 +14,12 @@ const AuctionCard = () => {
       <div className={styles.bidInfo}>
         <p className={styles.darkStyle}>Current Bid</p>
         <div className={styles.AvatarWrapper}>
-          <Avatar src={imageAssets.SamepleUser2} width={50} height={50} />
+          <Avatar 
+            src={imageAssets.SamepleUser2}
+             width={50} 
+             height={50} 
+            isVerified={true}
+             />
           <div className={styles.content}>
             <div className={styles.userName}>
               <p>Owner</p>

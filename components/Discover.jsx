@@ -71,6 +71,8 @@ const Discover = () => {
           userName={"E Cole."}
           burnPrice={"0.03"}
           likes={405}
+          isVerified={true}
+
         />
         <ArtInfoView
           artName={"Amazing Art"}
@@ -81,6 +83,7 @@ const Discover = () => {
           userName={"E Cole."}
           burnPrice={"0.03"}
           likes={405}
+          isVerified={true}
         />
         <ArtInfoView
           artName={"Amazing Art"}
@@ -91,6 +94,7 @@ const Discover = () => {
           userName={"E Cole."}
           burnPrice={"0.03"}
           likes={405}
+          isVerified={false}
         />
         <ArtInfoView
           artName={"Amazing Art"}
@@ -101,6 +105,7 @@ const Discover = () => {
           userName={"E Cole."}
           burnPrice={"0.03"}
           likes={405}
+          isVerified={true}
         />
         <ArtInfoView
           artName={"Amazing Art"}
@@ -111,6 +116,7 @@ const Discover = () => {
           userName={"E Cole."}
           burnPrice={"0.03"}
           likes={405}
+          isVerified={false}
         />
       </div>
       <div className={styles.loader}><MintedPixLoader /></div>
