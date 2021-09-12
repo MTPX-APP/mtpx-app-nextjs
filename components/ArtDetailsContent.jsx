@@ -2,10 +2,8 @@ import React, { useState, useEffect } from "react";
 import TabHeader from "./TabHeader";
 import { useRouter } from 'next/router'
 import { Tag } from 'primereact/tag';
-import { artDetailsLinks, imageAssets } from "../core/Constants";
-import { Colors } from "../core/Constants";
+import { artDetailsLinks } from "../core/Constants";
 import Link from "next/link";
-import PriceTag from "./PriceTag";
 import ArtPurchase from "./ArtPurchase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMedal, faLock } from "@fortawesome/free-solid-svg-icons";
