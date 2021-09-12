@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Countdown from 'react-countdown';
 import styles from "../styles/components/ArtPurchase.module.scss";
 import Avatar from "./Avatar";
 import { imageAssets } from "../core/Constants";
@@ -27,6 +28,20 @@ const ArtPurchase = () => {
   const handleTest = () => {
     setTestItem(true);
   };
+
+  const Completionist = () => <span>You are good to go!</span>;
+
+  // Renderer callback with condition
+  const renderer = ({ days, hours, minutes, seconds, completed }) => {
+    if (completed) {
+      // Render a completed state
+      return <Completionist />;
+    } else {
+      // Render a countdown
+      return <span className={styles.countDownTimer}>{hours}<span>H</span> {minutes}<span>M</span> {seconds}<span>S</span> <span>left</span></span>;
+    }
+  };
+
   return (
     <React.Fragment>
       <Modal show={visibleModalBid} onClose={() => setVisibleModalBid(false)}>
@@ -37,11 +52,7 @@ const ArtPurchase = () => {
         onClose={() => setVisibleModalPurchase(false)}
       >
         <Purchase />
-      </Modal>
-
-      {/* <ModalTwo show={testItem} onClose={() => setTestItem(false)}>
-        <Bid />
-      </ModalTwo> */}
+      </Modal>      
       <div className={styles.container}>
         <div className={styles.topSection}>
           <div className={styles.highestBid}>
@@ -62,12 +73,15 @@ const ArtPurchase = () => {
             </div>
           </div>
           <div className={styles.countDown}>
-          <FontAwesomeIcon
+            <Countdown
+              zeroPadTime={2}
+              date={Date.now() + ( 3600 * 1000 * 24)}
+              renderer={renderer}
+            />
+            <FontAwesomeIcon
             icon={faClock}
             className={styles.clockIcon}
             color={Colors.lightGrey} />
-
-            3h 12m 20s left
           </div>
         </div>
         <div className={`${styles.btnContainer}`}>

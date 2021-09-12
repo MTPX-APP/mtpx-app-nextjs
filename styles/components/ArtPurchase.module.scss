@@ -16,15 +16,28 @@
       
       align-items: center;
       display: flex;
-      padding: 0 20px;
+      padding: 0 0 0 20px;
       font-size: 15px;
       font-weight: var(--font-bolder);
-      color: var(--dark-grey);
+      color: var(--black);
+      align-content: right;
+      text-align: right;
+      justify-content: flex-end;
     
 
       .clockIcon {
-        margin-right: 10px;
+        margin-left: 10px;
         font-size: 20px;
+      }
+
+      .countDownTimer {
+        span {
+          color: var(--light-grey) !important;
+
+          &:last-child {
+            color: var(--dark-grey) !important;;
+          }
+        }
       }
     }
   }
