@@ -9,21 +9,32 @@
   }
 
   .badge {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    bottom: 2px;
-    right: 0;
-    position: absolute;
-    background-color: var(--lighter-blue);
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50% !important;
+    bottom: 5px !important;
+    right: 3px !important;
+    position: absolute !important;
+    background-color: var(--lighter-blue) !important;
     
     svg {
       color: var(--white) !important;        
-      width: 7px;
-      height: 7px;
-      position: relative;
-      top: -9px;
-      left: 4px;
+      width: 7px !important;
+      height: 7px !important;
+      position: relative !important;
+      top: 4px !important;
+      left: 4px !important;
+      display: block !important;
     }
+  }
+
+  .smallBadge {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    bottom: 5px !important;
+    right: 1px !important;
+    position: absolute !important;
+    background-color: var(--lighter-blue) !important;
   }
 }

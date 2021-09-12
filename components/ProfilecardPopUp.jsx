@@ -13,10 +13,11 @@ const ProfilecardPopUp = ({setProfilePopup, handleFeedback}) => {
           height={60}
           src={imageAssets.SamepleUser2}
           alt={"avatar"}
+          isVerified={true}
         />
       </div>
       <div className={styles.topContainer}>
-        <h2>@EnricoCole</h2>
+        <h2>EnricoCole</h2>
 
         <div className={styles.address}>
           0x41f8730e0b32b04beaa5757e5aea3aef970e5b613

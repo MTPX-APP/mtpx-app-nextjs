@@ -20,6 +20,7 @@ function ArtInfoView({
   userName,
   burnPrice,
   likes,
+  isVerified,
   navigation = false,
 }) {
 
@@ -68,6 +69,7 @@ function ArtInfoView({
               height={25}              
               src={userImage}
               alt={userName}
+              isVerified={isVerified && true}
             />
             <p className={styles.userName}>{userName}</p>
           </div>

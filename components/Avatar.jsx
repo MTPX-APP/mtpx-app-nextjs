@@ -20,10 +20,14 @@ const Avatar = ({ width, height, src, alt, isVerified }) => {
         alt={alt} 
         objectFit="cover"
       />
-      {isVerified && <div className={styles.badge}> <FontAwesomeIcon
+      { width > 35 && height > 35 ? (
+          isVerified && <div className={styles.badge}> <FontAwesomeIcon
             icon={faCheck}
             className={styles.verifiedIcon}            
-          /></div>}
+          /></div>
+      ) : (
+        isVerified && <div className={styles.smallBadge}></div>
+      )}
     </div>
   );
 };
