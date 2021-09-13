@@ -21,6 +21,7 @@ config.autoAddCss = false
 
 const ProfileCard = () => {
   const pageToast = useRef(null);
+  const [isSelfProfile, setIsSelfProfile] = useState(true);
   const [visibleModalReport, setVisibleModalReport] = useState(false);
   const [address, setAddress] = useState('0x41f8730e0b32b04beaa5757e5aea3aef970e5b613');
 
@@ -38,12 +39,16 @@ const ProfileCard = () => {
     <Toast ref={pageToast} /> 
       <Card className={styles.card}>
         <div className={styles.cardAvatar}>
-          <div className={styles.camera}>
-            <FontAwesomeIcon
-              icon={faCamera}
-              className={`${styles.cameraIcon}`}
-              />
-          </div>
+        { isSelfProfile && ( 
+        <Link href="/editprofile" passHref>
+            <div className={styles.camera}>
+              <FontAwesomeIcon
+                icon={faCamera}
+                className={`${styles.cameraIcon}`}
+                />
+            </div>
+          </Link>
+          )}  
           <Avatar
             width={130}
             height={130}
@@ -73,19 +78,37 @@ const ProfileCard = () => {
           <div>{`1000`} <span>Followers</span></div>
         </div>
         <div className={styles.btngrp}>
-          <Button label="Follow" className={`p-button-rounded ${styles.btnFollow}`} />
+        {
+          !isSelfProfile && (
+            <Button label="Follow" className={`p-button-rounded ${styles.btnFollow}`} />
+          )
+        }
           <ProfileShare shareUrl={`http://www.mintedpix.com`}/>
-          <Button
-            icon="pi pi-flag"
-            className={`p-button-rounded p-button-outlined  ${styles.btnReport}`}
-            onClick={handleReport} 
-          />
-          <Modal
-            show={visibleModalReport}
-            onClose={() => setVisibleModalReport(false)}
-          >
-            <ProfileReport />
-          </Modal>
+          {
+            isSelfProfile ? (
+              <Link href="/editprofile" passHref>
+                <Button
+                  icon="pi pi-pencil"
+                  className={`p-button-rounded p-button-outlined  ${styles.btnEdit}`}
+                />
+              </Link>                
+            ) : (
+              <>
+              <Button
+                  icon="pi pi-flag"
+                  className={`p-button-rounded p-button-outlined  ${styles.btnReport}`}
+                  onClick={handleReport} 
+                />
+                <Modal
+                  show={visibleModalReport}
+                  onClose={() => setVisibleModalReport(false)}
+                >
+                  <ProfileReport />
+                </Modal>
+              </>
+            )
+          }
+          
         </div>
         <Divider align="center" type="solid" className={styles.divider}>
             Bio
