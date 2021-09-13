@@ -94,7 +94,7 @@
   padding: 0 10px;
   margin: 2rem 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   position: relative;
 
   & .btnFollow {
@@ -119,6 +119,18 @@
       border-width: 2px !important;
       border-color: var(--dark-blue) !important;
       color: var(--dark-blue) !important;
+    }
+  }
+
+  & .btnEdit {
+    border: solid 2px var(--lighter-grey);
+    color: var(--light-text);
+
+    &:hover,
+    &:active {
+      border-width: 2px !important;
+      border-color: var(--light-blue) !important;
+      color: var(--light-blue) !important;
     }
   }
 
@@ -251,7 +263,7 @@
     h1 {
       font-size: 17px;
       font-weight: var(--font-bolder);
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       display: block;
     }
 
