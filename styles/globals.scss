@@ -92,6 +92,25 @@ small {
   border-color: var(--red) !important;
 }
 
+/* <Galleria> */
+.p-galleria {
+  .p-galleria-close {
+    width: 45px;
+    height: 45px;
+
+    .p-galleria-close-icon {
+      font-size: 20px;
+    }
+
+  }
+}
+
+.p-galleria-mask {
+  &.p-component-overlay {
+    background-color: rgba(0, 0, 0, 1);
+  }
+}
+
 /* <Dialogs> */
 .p-dialog {
   border-radius: 10px;
