@@ -90,13 +90,22 @@
       opacity: 1.0;
       .button {
         opacity: 1.0 !important;
+                        
       }
+      animation-duration: .2s;
+          animation-name: fadeAndScale;
+          animation-timing-function: cubic-bezier(.71,.55,.62,1.57); 
     }
 
     .artImage {
       opacity: 1.0;
       filter: brightness(85%);
     }
+
+    // .preview + div {
+    //   box-shadow: 0px 40px 32px -24px rgb(15 15 15 / 12%);    
+      
+    // }
   }
 }
 
@@ -206,6 +215,13 @@
   filter: brightness(100%);
 }
 
-
-
-
+@keyframes fadeAndScale {
+  from {
+      opacity: 0;
+      transform: translateY(5%);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0%);
+  }
+}
