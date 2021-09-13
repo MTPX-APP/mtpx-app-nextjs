@@ -38,7 +38,7 @@ const ArtPurchase = () => {
       return <Completionist />;
     } else {
       // Render a countdown
-      return <span className={styles.countDownTimer}>{hours}<span>H</span> {minutes}<span>M</span> {seconds}<span>S</span> <span>left</span></span>;
+      return <span className={styles.countDownTimer}>{days}<span>D</span>  {hours}<span>H</span> {minutes}<span>M</span> {seconds}<span>S</span> <span>left</span></span>;
     }
   };
 
@@ -78,10 +78,10 @@ const ArtPurchase = () => {
               date={Date.now() + ( 3600 * 1000 * 24)}
               renderer={renderer}
             />
-            <FontAwesomeIcon
+            {/*<FontAwesomeIcon
             icon={faClock}
             className={styles.clockIcon}
-            color={Colors.lightGrey} />
+            color={Colors.lightGrey} />*/}
           </div>
         </div>
         <div className={`${styles.btnContainer}`}>
