@@ -1,5 +1,5 @@
 import React, {useRef, useState, useEffect} from "react";
-import Link from "next/link";
+import axios from "axios";
 import { classNames } from 'primereact/utils';
 import Util from '../core/Utils/Util';
 import { useForm, Controller } from "react-hook-form";
@@ -22,7 +22,14 @@ const EditProfile = () => {
   const pageToast = useRef(null);
 
   // Default Values
-  const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState([
+    
+    {
+      label: 'USA',
+      value: 'United States'
+    }
+    
+  ]);
   const [showMessage, setShowMessage] = useState(false);
   const [formData, setFormData] = useState({});
   const defaultValues = {
@@ -30,13 +37,12 @@ const EditProfile = () => {
     email: '',
     customUrl: '',
     bio: '',
-    country: null,
+    country: [],
     websiteUrl: '',
     twitterUrl: '',
     dribbbleUrl: '',
     facebookUrl: '',
     instagramUrl: '',
-    accept: false
   }
 
   const { 
@@ -49,7 +55,7 @@ const EditProfile = () => {
 
   useEffect(() => {
 
-    setFocus("displayName");
+    //setFocus("displayName");
 
     if(blockedPanel) {
         setTimeout(() => {
@@ -59,8 +65,16 @@ const EditProfile = () => {
     }
   }, [blockedPanel, setFocus]);
 
-  const onSubmit = (data) => {
-      setFormData(data);
+  const onSubmit = (e) => (data) => {
+      e.preventDefault();
+      axios.post('http://localhost:8000/api/updateprofile', { data })
+      .then((res)=> {
+        console.log(res);
+        setFormData(data);
+      })
+      .catch((err) => console.log(err));
+
+
       setShowMessage(true);
       setBlockedPanel(true);
       reset();
@@ -245,7 +259,8 @@ const EditProfile = () => {
                       value={field.value} 
                       onChange={(e) => field.onChange(e.value)}
                       options={countries}
-                      optionLabel="country"
+                      optionLabel="value"
+                      optionValue="label"
                       placeholder="Select your location"
                       className={`${styles.dropdown} ${classNames({'p-invalid': fieldState.invalid })}`}
                       dropdownIcon={"pi pi-angle-down"}
